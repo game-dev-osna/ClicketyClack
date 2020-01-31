@@ -7,10 +7,12 @@ public class KeyScript : MonoBehaviour
     public KeyCode keyCode;
     private float originalY;
     public float speed = 1;
+    private KeyboardSoundPlayer keyboardSoundPlayer;
     // Start is called before the first frame update
     void Start()
     {
         originalY = transform.position.y;
+        keyboardSoundPlayer = GameObject.FindObjectOfType<KeyboardSoundPlayer>();
     }
 
     // Update is called once per frame
@@ -18,6 +20,7 @@ public class KeyScript : MonoBehaviour
     {
         if(Input.GetKeyDown(keyCode))
         {
+            StartCoroutine(keyboardSoundPlayer.PlayKeyAudioasd());
             StartCoroutine(PressMove(originalY-0.06f));
         }
         if(Input.GetKeyUp(keyCode))
