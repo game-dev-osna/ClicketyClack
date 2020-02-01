@@ -236,10 +236,13 @@ public class Player : MonoBehaviour
         {
             //Effect
 
-            depot.PlaceInDepot(keyInputs.codeToScript[carryingKey]);
-            Destroy(carriedCopy);
-            animator.SetBool("IsCarrying", false);
-            carryingKey = KeyCode.None;
+            if(carryingKey != KeyCode.None)
+            {
+                depot.PlaceInDepot(keyInputs.codeToScript[carryingKey]);
+                Destroy(carriedCopy);
+                animator.SetBool("IsCarrying", false);
+                carryingKey = KeyCode.None;
+            }
             transform.position = keyInputs.codeToScript[ControllKey].transform.position + heightOffset;
             Stun(null);
         }
