@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Player : MonoBehaviour
 {
@@ -11,9 +12,12 @@ public class Player : MonoBehaviour
     public float rampDist;
     public float showMe;
     public float stunDuration;
+    public Color inactiveColor;
+    public Color activeColor;
+    public SkinnedMeshRenderer meshRenderer;
     private KeyboardInput keyInputs;
 
-    private Vector3 heightOffset = Vector3.up * 0.1888638f;
+    public Vector3 heightOffset = Vector3.zero;
 
     private bool isMoving;
 
@@ -32,47 +36,18 @@ public class Player : MonoBehaviour
         keyInputs.ActionInput.AddListener(OnAction);
 
         transform.position = keyInputs.codeToScript[ControllKey].transform.position + heightOffset;
+        meshRenderer.material = new Material(meshRenderer.material);
+        meshRenderer.material.SetColor("_BaseColor", inactiveColor);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(isMoving)
+    private void Update() {
+        if(Input.GetKeyDown(ControllKey))
         {
-            var dir = target - transform.position;
-            float dist = dir.magnitude;
-
-            float speedMult  = 1;
-            /*
-            if(dist > rampDist && speed < 1)
-            {
-                speed += 
-            }
-            */
-
-
-            if(startDist - dist < rampDist)
-            {
-                speedMult = speedCurve.Evaluate((startDist - dist).Remap(0,rampDist,0,1));
-            }
-            else if( dist < rampDist)
-            {
-                speedMult = speedCurve.Evaluate(dist.Remap(0,rampDist,0,1));
-            }
-            animator.SetFloat("Speed", speedMult);
-            speedMult = Mathf.Clamp(speedMult, 0.6f, 1);
-
-            if(dist > 0.02f)
-            {
-                showMe = speed * speedMult;
-                transform.position += dir.normalized * Time.deltaTime * showMe;
-            }
-            else
-            {
-                transform.position = target;
-                animator.SetFloat("Speed", 0);
-                isMoving = false;
-            }
+            DOTween.To(x => meshRenderer.material.SetColor("_BaseColor", Color.Lerp(inactiveColor, activeColor, x)), 0, 1, 0.25f);
+        }
+        if(Input.GetKeyUp(ControllKey))
+        {
+            DOTween.To(x => meshRenderer.material.SetColor("_BaseColor", Color.Lerp(activeColor, inactiveColor, x)), 0, 1, 0.25f);
         }
     }
 
@@ -80,10 +55,23 @@ public class Player : MonoBehaviour
     {
         if(isStunned) return;
         start = transform.position;
-        this.target = target;
-        startDist = Vector3.Distance(target, start);
+        this.target = new Vector3(target.x, transform.position.y, target.z);
+        startDist = Vector3.Distance(start, this.target);
         isMoving = true;
-        transform.LookAt(target);
+        transform.LookAt(this.target);
+
+        //TODO with sequence to lerp up then steady then down
+        var moveTween = transform.DOMove(this.target, startDist / speed);
+        moveTween.OnUpdate(() => {
+            var t =(Mathf.Sin(moveTween.ElapsedPercentage().Remap(0,1,-Mathf.PI+Mathf.PI/2,Mathf.PI+Mathf.PI/2)) + 1) / 2.0f;
+            animator.SetFloat("Speed",t);
+
+            Debug.Log("0: "+t);
+        });
+        moveTween.OnComplete(() => {
+            animator.SetFloat("Speed", 0);
+            isMoving = false;
+        });
     }
 
     private void OnTarget(KeyCode target)
@@ -120,7 +108,7 @@ public class Player : MonoBehaviour
                             var keyCopy = Instantiate(hitKey, transform);
                             carriedCopy = keyCopy.gameObject;
                             Destroy(keyCopy);
-                            carriedCopy.transform.position = transform.position + Vector3.up * 0.2f;
+                            carriedCopy.transform.position = transform.position + Vector3.up * 0.3f;
                             carryingKey = hitKey.Take();
                         }
                         else if(carryingKey != KeyCode.None)
@@ -136,7 +124,7 @@ public class Player : MonoBehaviour
                             var keyCopy = Instantiate(hitKey, transform);
                             carriedCopy = keyCopy.gameObject;
                             Destroy(keyCopy);
-                            carriedCopy.transform.position = transform.position + Vector3.up * 0.2f;
+                            carriedCopy.transform.position = transform.position + Vector3.up * 0.3f;
                             carryingKey = hitKey.Take();
                         }
                     }
