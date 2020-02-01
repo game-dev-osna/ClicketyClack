@@ -211,7 +211,7 @@ public class Player : MonoBehaviour
         carriedCopy = keyCopy.gameObject;
         Destroy(keyCopy);
         carriedCopy.transform.position = keyAttachPoint.transform.position;
-        carriedCopy.transform.localScale = Vector3.one * 0.9f;
+        carriedCopy.transform.localScale = Vector3.one * 0.6f;
         carryingKey = toTake.Take();
 
         animator.SetBool("IsCarrying", true);
