@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
     {
         if (PlayerUI)
         {
-            PlayerUI.SetWinKeys(WinConditionKeys);
+            PlayerUI.updateUI(WinConditionKeys);
         }
     }
 
@@ -173,12 +173,12 @@ public class Player : MonoBehaviour
                     else if(carryingKey != KeyCode.None)
                     {
                         var original = keyInputs.codeToScript[carryingKey];
-                        original.Put();
+
+                        var temp = original.transform.position;
+                        original.Put(hitKey.transform.position);
                         Destroy(carriedCopy);
 
 
-                        var temp = original.transform.position;
-                        original.transform.position = hitKey.transform.position;
                         hitKey.transform.position = temp;
 
                         PickUp(hitKey);
