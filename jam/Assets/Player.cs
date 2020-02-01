@@ -22,11 +22,14 @@ public class Player : MonoBehaviour
     private Vector3 target;
 
     private bool isStunned;
+    private KeyCode carryingKey = KeyCode.None;
+    private GameObject carriedCopy;
 
     private void Start()
     {
         keyInputs = GameObject.FindObjectOfType<KeyboardInput>();
-        keyInputs.InputEvent.AddListener(OnInput);
+        keyInputs.TargetInput.AddListener(OnTarget);
+        keyInputs.ActionInput.AddListener(OnAction);
 
         transform.position = keyInputs.codeToScript[ControllKey].transform.position + heightOffset;
     }
@@ -56,8 +59,8 @@ public class Player : MonoBehaviour
             {
                 speedMult = speedCurve.Evaluate(dist.Remap(0,rampDist,0,1));
             }
+            animator.SetFloat("Speed", speedMult);
             speedMult = Mathf.Clamp(speedMult, 0.6f, 1);
-            animator.SetFloat("Speed", speedMult.Remap(0.6f,1,0,1));
 
             if(dist > 0.02f)
             {
@@ -83,12 +86,62 @@ public class Player : MonoBehaviour
         transform.LookAt(target);
     }
 
-    private void OnInput(List<KeyCode> targets)
+    private void OnTarget(KeyCode target)
     {
-        if(Input.GetKey(ControllKey) && targets.Count > 0)
+        if(Input.GetKey(ControllKey))
         {
             //handle target
-            StartMoveToTarget(keyInputs.codeToScript[targets[0]].transform.position + heightOffset);
+            StartMoveToTarget(keyInputs.codeToScript[target].transform.position + heightOffset);
+        }
+    }
+
+    private void OnAction(KeyCode action)
+    {
+        if(Input.GetKey(ControllKey))
+        {
+            if(action == KeyCode.Space && !isMoving && !isStunned)
+            {
+                Debug.Log("Shitty shit");
+                if(Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo ,0.4f))
+                {
+                    Debug.Log("hit");
+                    var hitKey = hitInfo.transform.GetComponent<KeyScript>();
+                    if(hitKey && keyInputs.targetKeys.Contains(hitKey.keyCode))
+                    {
+                        Debug.Log("containing and bla");
+                        if(hitKey.IsRemoved && carryingKey == hitKey.keyCode)
+                        {
+                            hitKey.Put();
+                            carryingKey = KeyCode.None;
+                            Destroy(carriedCopy);
+                        }
+                        else if(carryingKey == KeyCode.None)
+                        {
+                            var keyCopy = Instantiate(hitKey, transform);
+                            carriedCopy = keyCopy.gameObject;
+                            Destroy(keyCopy);
+                            carriedCopy.transform.position = transform.position + Vector3.up * 0.2f;
+                            carryingKey = hitKey.Take();
+                        }
+                        else if(carryingKey != KeyCode.None)
+                        {
+                            var original = keyInputs.codeToScript[carryingKey];
+                            original.Put();
+                            Destroy(carriedCopy);
+
+
+                            var temp = original.transform.position;
+                            original.transform.position = hitKey.transform.position;
+                            hitKey.transform.position = temp;
+                            var keyCopy = Instantiate(hitKey, transform);
+                            carriedCopy = keyCopy.gameObject;
+                            Destroy(keyCopy);
+                            carriedCopy.transform.position = transform.position + Vector3.up * 0.2f;
+                            carryingKey = hitKey.Take();
+                        }
+                    }
+                }
+            }
         }
     }
 
