@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public Color activeColor;
     public Transform keyAttachPoint;
     public SkinnedMeshRenderer meshRenderer;
+    public ParticleSystem trail;
     private KeyboardInput keyInputs;
 
     public Vector3 heightOffset = Vector3.zero;
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour
         transform.position = keyInputs.codeToScript[ControllKey].transform.position + heightOffset;
         meshRenderer.material = new Material(meshRenderer.material);
         meshRenderer.material.SetColor("_BaseColor", inactiveColor);
+        SetMoving(false);
     }
 
     private void Update() {
@@ -65,7 +67,7 @@ public class Player : MonoBehaviour
         start = transform.position;
         this.target = new Vector3(target.x, transform.position.y, target.z);
         startDist = Vector3.Distance(start, this.target);
-        isMoving = true;
+        SetMoving(true);
         transform.LookAt(this.target);
 
         //TODO with sequence to lerp up then steady then down
@@ -87,14 +89,22 @@ public class Player : MonoBehaviour
                 }
             });
             moveTween.OnComplete(() => {
-                animator.SetFloat("Speed", 0);
-                isMoving = false;
+                SetMoving(false);
             });
             moveTween.OnKill(() => {
-                animator.SetFloat("Speed", 0);
-                isMoving = false;
+                SetMoving(false);
             });
         }
+    }
+
+    private void SetMoving(bool moving)
+    {
+        isMoving = moving;
+        if(!moving)
+        {
+            animator.SetFloat("Speed", 0);
+        }
+        trail.enableEmission = moving;
     }
 
     private void OnTarget(KeyCode target)
@@ -180,8 +190,7 @@ public class Player : MonoBehaviour
         if(isStunned) return;
         transform.LookAt(other.transform);
         isStunned = true;
-        isMoving = false;
-        animator.SetFloat("Speed", 0);
+        SetMoving(false);
         //collision animatiuon?!
         transform.position += transform.forward * -1 * 0.1f;
         animator.SetBool("IsStunned", true);
