@@ -41,7 +41,6 @@ public class PlayerUI : MonoBehaviour
             var keyScript = keyInputs.codeToScript[key];
             if (keyScript.IsOnRightSpot)
             {
-            {
                 keyScripts[key].GetComponent<MeshRenderer>().material = correctMaterial;
             }
             else
