@@ -13,11 +13,13 @@ public class KeyScript : MonoBehaviour
     public bool isOnRightSpot;
     public bool IsOnRightSpot => isOnRightSpot;
 
+    public bool IsBroken;
     public bool IsRemoved => removed;
     private bool removed;
     private MeshRenderer renderer;
     private Canvas canvas;
     private Vector3 originalPos;
+    public Vector3 beforeDepotPos;
 
     static public UnityEvent KeyPutEvent = new UnityEvent();
 
@@ -57,6 +59,15 @@ public class KeyScript : MonoBehaviour
         {
             StartCoroutine(PressMove(originalY));
         }
+    }
+
+    public void ToDepot()
+    {
+        beforeDepotPos = transform.position;
+        IsBroken = true;
+        renderer.enabled = true;
+        canvas.gameObject.SetActive(true);
+        removed = false;
     }
 
     public KeyCode Take()

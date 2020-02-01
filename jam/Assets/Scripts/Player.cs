@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     public GameObject collisionEffect;
     public GameObject takeEffect;
     private KeyboardInput keyInputs;
+    private Depot depot;
 
     public Vector3 heightOffset = Vector3.zero;
 
@@ -50,15 +51,16 @@ public class Player : MonoBehaviour
     private void Start()
     {
         keyInputs = GameObject.FindObjectOfType<KeyboardInput>();
+        depot = GameObject.FindObjectOfType<Depot>();
         keyInputs.TargetInput.AddListener(OnTarget);
         keyInputs.ActionInput.AddListener(OnAction);
 
         transform.position = keyInputs.codeToScript[ControllKey].transform.position + heightOffset;
         meshRenderer.material = new Material(meshRenderer.material);
         meshRenderer.material.SetColor("_BaseColor", inactiveColor);
-        KeyScript.KeyPutEvent.AddListener(CheckToWin);
         controllTime = maxControllTime;
         SetMoving(false);
+        enemyLayer = LayerMask.NameToLayer("Enemy");
     }
 
     private void Update() {
@@ -83,29 +85,6 @@ public class Player : MonoBehaviour
             controllTime = Mathf.Min(controllTime + Time.deltaTime, maxControllTime);
         }
         PlayerUI.UpdateMeterUI(controllTime / maxControllTime);
-    }
-
-    private void CheckToWin()
-    {
-        updateUI();
-
-        bool allTrue = true;
-        foreach(var key in WinConditionKeys)
-        {
-            if (!keyInputs.codeToScript[key].IsOnRightSpot)
-            {
-                allTrue = false;
-                break;
-            }
-        }
-        if (allTrue)
-        {
-            //@TODO win
-        }
-    }
-    public void updateUI()
-    {
-        PlayerUI.updateKeyUi(WinConditionKeys);
     }
 
     TweenerCore<Vector3, Vector3, VectorOptions> moveTween;
@@ -159,6 +138,8 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKey(ControllKey))
         {
+
+            if(keyInputs.codeToScript[target].IsBroken) return;
             //handle target
             StartMoveToTarget(keyInputs.codeToScript[target].transform.position + heightOffset);
         }
@@ -199,6 +180,16 @@ public class Player : MonoBehaviour
                         SpawnEffect(takeEffect, transform.position + Vector3.up * 0.52f);
                     }
                 }
+                var hitDepot = hitInfo.transform.GetComponent<Depot>();
+                if(hitDepot != null && carryingKey == KeyCode.None)
+                {
+                    var depotKey = depot.TakeFromDepot();
+                    if(depotKey != null)
+                    {
+                        PickUp(depotKey);
+                        SpawnEffect(takeEffect, transform.position + Vector3.up * 0.52f);
+                    }
+                }
             }
         }
 
@@ -231,6 +222,7 @@ public class Player : MonoBehaviour
         animator.SetBool("IsCarrying", true);
     }
 
+    private int enemyLayer;
     private void OnTriggerEnter(Collider other)
     {
         var otherPlayer = other.gameObject.GetComponent<Player>();
@@ -239,6 +231,17 @@ public class Player : MonoBehaviour
             Stun(otherPlayer);
             otherPlayer.Stun(this, true);
 
+        }
+        else if(other.gameObject.layer == enemyLayer)
+        {
+            //Effect
+
+            depot.PlaceInDepot(keyInputs.codeToScript[carryingKey]);
+            Destroy(carriedCopy);
+            animator.SetBool("IsCarrying", false);
+            carryingKey = KeyCode.None;
+            transform.position = keyInputs.codeToScript[ControllKey].transform.position + heightOffset;
+            Stun(null);
         }
     }
 

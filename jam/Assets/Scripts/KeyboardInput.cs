@@ -40,6 +40,7 @@ public class KeyboardInput : MonoBehaviour
             targetKeys.Add((KeyCode)i);
         }
         targetKeys.Add((KeyCode)48);
+        targetKeys.Add((KeyCode)280);
         for(int i = 50; i <= 57; i++)
         {
             targetKeys.Add((KeyCode)i);
@@ -47,28 +48,35 @@ public class KeyboardInput : MonoBehaviour
 
     }
 
+public int shuffleAmount;
     private void Start()
     {
         UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
-        var shuffled = targetKeys.OrderBy(x => UnityEngine.Random.value).ToArray();    
+        var shuffled = targetKeys.OrderBy(x => UnityEngine.Random.value).Take(12).ToArray();    
+        int[] dernged = Derange(shuffled.Length);
 
-        var vecs = shuffled.Select(k => codeToScript[k].transform.position).ToList();
-        for(int i = 0; i < targetKeys.Count; i++)
+        var vecs = dernged.Select(i => codeToScript[shuffled[i]].transform.position).ToArray();
+        for(int i = 0; i < shuffled.Length; i++)
         {
-            codeToScript[targetKeys[i]].transform.position = vecs[i];
+            codeToScript[shuffled[i]].transform.position = vecs[i];
         }
+        KeyScript.KeyPutEvent.AddListener(WinConCheck);
+    }
 
-        var players = GameObject.FindObjectsOfType<Player>();
-        int index = 0;
-        foreach(var player in players)
+    private void WinConCheck()
+    {
+        bool allTrue = true;
+        foreach(var key in targetKeys)
         {
-
-            for (int i = index; i < index + Player.NeedForWin; i++)
+            if(!codeToScript[key].IsOnRightSpot)
             {
-                player.WinConditionKeys.Add(shuffled[i]);
+                allTrue = false;
             }
-            index += Player.NeedForWin;
-            player.updateUI();
+        }
+        if(allTrue)
+        {
+            //win:
+            Debug.Log("win");
         }
     }
 
@@ -92,6 +100,37 @@ public class KeyboardInput : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             ActionInput.Invoke(KeyCode.Space);
+        }
+    }
+
+    private int[] Derange(int n)
+    {
+        while(true)
+        {
+            bool didBreak = false;
+            int[] v = Enumerable.Range(0, n).ToArray();
+            for(int j = n-1; j >= 0 ; j--)
+            {
+                int p = UnityEngine.Random.Range(0, j+1);
+                if(v[p] == j)
+                {
+                    didBreak = true;
+                    break;
+                }
+                else
+                {
+                    var temp = v[j];
+                    v[j] = v[p];
+                    v[p] = temp;
+                }
+            }
+            if(!didBreak)
+            {
+                if(v[0] != 0)
+                {
+                    return v;
+                }
+            }
         }
     }
 }
