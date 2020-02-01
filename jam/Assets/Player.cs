@@ -6,13 +6,14 @@ public class Player : MonoBehaviour
 {
     public KeyCode ControllKey;
     public AnimationCurve speedCurve;
+    public Animator animator;
     public float speed = 1;
     public float rampDist;
     public float showMe;
     public float stunDuration;
     private KeyboardInput keyInputs;
 
-    private Vector3 heightOffset =  Vector3.up * 0.36f;
+    private Vector3 heightOffset = Vector3.up * 0.1888638f;
 
     private bool isMoving;
 
@@ -56,6 +57,7 @@ public class Player : MonoBehaviour
                 speedMult = speedCurve.Evaluate(dist.Remap(0,rampDist,0,1));
             }
             speedMult = Mathf.Clamp(speedMult, 0.6f, 1);
+            animator.SetFloat("Speed", speedMult.Remap(0.6f,1,0,1));
 
             if(dist > 0.02f)
             {
@@ -65,6 +67,7 @@ public class Player : MonoBehaviour
             else
             {
                 transform.position = target;
+                animator.SetFloat("Speed", 0);
                 isMoving = false;
             }
         }
@@ -106,6 +109,7 @@ public class Player : MonoBehaviour
         transform.LookAt(other.transform);
         isStunned = true;
         isMoving = false;
+        animator.SetFloat("Speed", 0);
         //collision animatiuon?!
         transform.position += transform.forward * -1 * 0.04f;
         StartCoroutine(Unstun());
