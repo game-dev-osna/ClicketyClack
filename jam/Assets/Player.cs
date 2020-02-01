@@ -11,9 +11,11 @@ public class Player : MonoBehaviour
     public float rampDist;
     public float showMe;
     public float stunDuration;
+    public Color playerColor;
+    public SkinnedMeshRenderer meshRenderer;
     private KeyboardInput keyInputs;
 
-    private Vector3 heightOffset = Vector3.up * 0.1888638f;
+    public Vector3 heightOffset = Vector3.zero;
 
     private bool isMoving;
 
@@ -80,10 +82,10 @@ public class Player : MonoBehaviour
     {
         if(isStunned) return;
         start = transform.position;
-        this.target = target;
-        startDist = Vector3.Distance(target, start);
+        this.target = new Vector3(target.x, transform.position.y, target.z);
+        startDist = Vector3.Distance(start, this.target);
         isMoving = true;
-        transform.LookAt(target);
+        transform.LookAt(this.target);
     }
 
     private void OnTarget(KeyCode target)
@@ -120,7 +122,7 @@ public class Player : MonoBehaviour
                             var keyCopy = Instantiate(hitKey, transform);
                             carriedCopy = keyCopy.gameObject;
                             Destroy(keyCopy);
-                            carriedCopy.transform.position = transform.position + Vector3.up * 0.2f;
+                            carriedCopy.transform.position = transform.position + Vector3.up * 0.3f;
                             carryingKey = hitKey.Take();
                         }
                         else if(carryingKey != KeyCode.None)
@@ -136,7 +138,7 @@ public class Player : MonoBehaviour
                             var keyCopy = Instantiate(hitKey, transform);
                             carriedCopy = keyCopy.gameObject;
                             Destroy(keyCopy);
-                            carriedCopy.transform.position = transform.position + Vector3.up * 0.2f;
+                            carriedCopy.transform.position = transform.position + Vector3.up * 0.3f;
                             carryingKey = hitKey.Take();
                         }
                     }
