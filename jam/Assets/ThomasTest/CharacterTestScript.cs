@@ -20,6 +20,16 @@ public class CharacterTestScript : MonoBehaviour
             animator.SetTrigger("PickUp");
         }
     }
+    private void Stun()
+    {
+        Animator animator = GetComponent<Animator>();
+        animator.SetTrigger("StartStun");
+    }
+    private void EndStun()
+    {
+        Animator animator = GetComponent<Animator>();
+        animator.SetTrigger("EndStun");
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +43,14 @@ public class CharacterTestScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Test();
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Stun();
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            EndStun();
         }
     }
 }
