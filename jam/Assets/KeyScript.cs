@@ -23,6 +23,10 @@ public class KeyScript : MonoBehaviour
 
     private void Awake() {
         originalPos = transform.position;
+        if(keyCode == KeyCode.T)
+        {
+            Debug.Log(originalPos);
+        }
     }
 
     // Start is called before the first frame update
@@ -64,13 +68,19 @@ public class KeyScript : MonoBehaviour
         return keyCode;
     }
 
-    public void Put()
+    public void Put(Vector3? newPos = null)
     {
+        if(newPos != null)
+        {
+            transform.position = newPos.Value;
+        }
         canvas.gameObject.SetActive(true);
         removed = false;
         renderer.enabled = true;
-
+        Debug.Log(transform.position);
+        Debug.Log("Distance - " + Vector3.Distance(transform.position, originalPos));
         isOnRightSpot = Vector3.Distance(transform.position, originalPos) < 0.01f;
+        Debug.Log("Script - " + isOnRightSpot);
         KeyPutEvent.Invoke();
     }
 

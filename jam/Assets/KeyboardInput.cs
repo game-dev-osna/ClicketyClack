@@ -10,6 +10,7 @@ public class KeyboardInput : MonoBehaviour
 {
 
 
+
     public GameObject keyboardParent;
     public List<KeyCode> controllKeys = new List<KeyCode>();
     public List<KeyCode> targetKeys = new List<KeyCode>();
@@ -65,7 +66,6 @@ public class KeyboardInput : MonoBehaviour
             for (int i = index; i < index + Player.NeedForWin; i++)
             {
                 player.WinConditionKeys.Add(shuffled[i]);
-                Debug.Log(shuffled[i]);
             }
             index += Player.NeedForWin;
             player.updateUI();

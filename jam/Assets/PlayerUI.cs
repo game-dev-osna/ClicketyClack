@@ -8,26 +8,52 @@ using DG.Tweening.Plugins.Options;
 public class PlayerUI : MonoBehaviour
 {
     public List<Transform> UITransforms;
+    public Material correctMaterial;
+    public Material wrongMaterial;
 
     private KeyboardInput keyInputs;
+    private bool isInitialized = false;
+    private Dictionary<KeyCode, GameObject> keyScripts = new Dictionary<KeyCode, GameObject>();
 
-    public void SetWinKeys(List<KeyCode> keys)
+    public void AddWinKeys(List<KeyCode> keys)
     {
-        keyInputs = GameObject.FindObjectOfType<KeyboardInput>();
+        isInitialized = true;
         int index = 3;
         int size = UITransforms.Count;
-        Debug.Log("1");
-        foreach(var key in keys)
+        foreach (var key in keys)
         {
-            Debug.Log("2");
             var keyScript = keyInputs.codeToScript[key];
-            var copyKey = Instantiate(keyScript, UITransforms[index%size]);
+            var copyKey = Instantiate(keyScript, UITransforms[index % size]);
             copyKey.transform.localPosition = Vector3.zero;
             copyKey.transform.localRotation = Quaternion.identity;
             Destroy(copyKey.GetComponent<KeyScript>());
-            UITransforms[index%size].gameObject.GetComponent<MeshRenderer>().enabled = false;
+            UITransforms[index % size].gameObject.GetComponent<MeshRenderer>().enabled = false;
+            keyScripts.Add(key, copyKey.gameObject);
             index++;
         }
+    }
+
+    public void updateUI(List<KeyCode> keys)
+    {
+        if (!isInitialized) AddWinKeys(keys);
+        foreach (var key in keys)
+        {
+            var keyScript = keyInputs.codeToScript[key];
+            if (keyScript.IsOnRightSpot)
+            {
+            {
+                keyScripts[key].GetComponent<MeshRenderer>().material = correctMaterial;
+            }
+            else
+            {
+                keyScripts[key].GetComponent<MeshRenderer>().material = wrongMaterial;
+            }
+        }
+    }
+
+    private void Awake()
+    {
+        keyInputs = GameObject.FindObjectOfType<KeyboardInput>();
     }
 
     // Start is called before the first frame update
