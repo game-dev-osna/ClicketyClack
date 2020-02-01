@@ -65,6 +65,7 @@ public class KeyScript : MonoBehaviour
         canvas.gameObject.SetActive(false);
         removed = true;
         isOnRightSpot = false;
+        KeyPutEvent.Invoke();
         return keyCode;
     }
 
