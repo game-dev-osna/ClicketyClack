@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     public Transform keyAttachPoint;
     public SkinnedMeshRenderer meshRenderer;
     public ParticleSystem trail;
+    public GameObject collisionEffect;
+    public GameObject takeEffect;
     private KeyboardInput keyInputs;
 
     public Vector3 heightOffset = Vector3.zero;
@@ -166,6 +168,7 @@ public class Player : MonoBehaviour
                     else if(carryingKey == KeyCode.None)
                     {
                         PickUp(hitKey);
+                        SpawnEffect(takeEffect, transform.position + Vector3.up * 0.52f);
                     }
                     else if(carryingKey != KeyCode.None)
                     {
@@ -179,11 +182,19 @@ public class Player : MonoBehaviour
                         hitKey.transform.position = temp;
 
                         PickUp(hitKey);
+                        SpawnEffect(takeEffect, transform.position + Vector3.up * 0.52f);
                     }
                 }
             }
         }
 
+    }
+
+    private void SpawnEffect(GameObject effectPrefab, Vector3 pos)
+    {
+        var effect = Instantiate(effectPrefab, pos , Quaternion.identity);
+        effect.transform.LookAt(Camera.main.transform);
+        effect.transform.forward = effect.transform.forward * -1;
     }
 
     private void PutDown(KeyScript toPut)
@@ -217,19 +228,20 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void Stun(Player other, bool swap = false)
+    public void Stun(Player other, bool doOnce = false)
     {
         if(isStunned) return;
+        if(doOnce)
+        {
+            KeySwap(other);
+            SpawnEffect(collisionEffect, (transform.position + other.transform.position) / 2 + Vector3.up * 0.43f);
+        }
         transform.LookAt(other.transform);
         isStunned = true;
         SetMoving(false);
         //collision animatiuon?!
         transform.position += transform.forward * -1 * 0.1f;
         animator.SetBool("IsStunned", true);
-        if(swap)
-        {
-            KeySwap(other);
-        }
         StartCoroutine(Unstun());
     }
 
