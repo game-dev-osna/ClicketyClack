@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public Color activeColor;
     public Transform keyAttachPoint;
     public SkinnedMeshRenderer meshRenderer;
+    public ParticleSystem trail;
     private KeyboardInput keyInputs;
 
     public Vector3 heightOffset = Vector3.zero;
@@ -50,8 +51,8 @@ public class Player : MonoBehaviour
         transform.position = keyInputs.codeToScript[ControllKey].transform.position + heightOffset;
         meshRenderer.material = new Material(meshRenderer.material);
         meshRenderer.material.SetColor("_BaseColor", inactiveColor);
-
         KeyScript.KeyPutEvent.AddListener(CheckToWin);
+        SetMoving(false);
     }
 
     private void Update() {
@@ -98,7 +99,7 @@ public class Player : MonoBehaviour
         start = transform.position;
         this.target = new Vector3(target.x, transform.position.y, target.z);
         startDist = Vector3.Distance(start, this.target);
-        isMoving = true;
+        SetMoving(true);
         transform.LookAt(this.target);
 
         //TODO with sequence to lerp up then steady then down
@@ -120,14 +121,22 @@ public class Player : MonoBehaviour
                 }
             });
             moveTween.OnComplete(() => {
-                animator.SetFloat("Speed", 0);
-                isMoving = false;
+                SetMoving(false);
             });
             moveTween.OnKill(() => {
-                animator.SetFloat("Speed", 0);
-                isMoving = false;
+                SetMoving(false);
             });
         }
+    }
+
+    private void SetMoving(bool moving)
+    {
+        isMoving = moving;
+        if(!moving)
+        {
+            animator.SetFloat("Speed", 0);
+        }
+        trail.enableEmission = moving;
     }
 
     private void OnTarget(KeyCode target)
@@ -142,7 +151,7 @@ public class Player : MonoBehaviour
     private void OnAction(KeyCode action)
     {
         if(!Input.GetKey(ControllKey)) return;
-        
+
         if(action == KeyCode.Space && !isMoving && !isStunned)
         {
             if(Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo ,0.4f))
@@ -174,7 +183,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        
+
     }
 
     private void PutDown(KeyScript toPut)
@@ -193,14 +202,14 @@ public class Player : MonoBehaviour
         carriedCopy.transform.position = keyAttachPoint.transform.position;
         carriedCopy.transform.localScale = Vector3.one * 0.9f;
         carryingKey = toTake.Take();
-        
+
         animator.SetBool("IsCarrying", true);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         var otherPlayer = other.gameObject.GetComponent<Player>();
-        if(otherPlayer)   
+        if(otherPlayer)
         {
             Stun(otherPlayer);
             otherPlayer.Stun(this, true);
@@ -213,8 +222,7 @@ public class Player : MonoBehaviour
         if(isStunned) return;
         transform.LookAt(other.transform);
         isStunned = true;
-        isMoving = false;
-        animator.SetFloat("Speed", 0);
+        SetMoving(false);
         //collision animatiuon?!
         transform.position += transform.forward * -1 * 0.1f;
         animator.SetBool("IsStunned", true);

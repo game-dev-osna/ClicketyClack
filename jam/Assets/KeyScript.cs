@@ -93,6 +93,7 @@ public class KeyScript : MonoBehaviour
                 transform.position += transform.up * Time.deltaTime * speed * dir;
             }
         }
+        transform.position = new Vector3(transform.position.x, targetY, transform.position.z);
 
         yield return null;
     }
