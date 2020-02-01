@@ -50,13 +50,13 @@ public class KeyboardSoundPlayer : MonoBehaviour
     void Update()
     {
         //Test
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             StartCoroutine(PlaySpacebarAudio());
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
             StartCoroutine(PlayKeyAudioasd());
-        }
+        }*/
     }
 }
