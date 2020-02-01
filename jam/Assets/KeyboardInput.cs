@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class InputEvent : UnityEvent<List<KeyCode>>{}
+public class InputEvent : UnityEvent<KeyCode>{}
 public class KeyboardInput : MonoBehaviour
 {
     public GameObject keyboardParent;
@@ -14,7 +14,8 @@ public class KeyboardInput : MonoBehaviour
 
     public Dictionary<KeyCode, KeyScript> codeToScript = new Dictionary<KeyCode, KeyScript>();
     public KeyScript[] keys;
-    public InputEvent InputEvent = new InputEvent();
+    public InputEvent TargetInput = new InputEvent();
+    public InputEvent ActionInput = new InputEvent();
     // Start is called before the first frame update
     private void Awake()
     {
@@ -55,6 +56,13 @@ public class KeyboardInput : MonoBehaviour
                 currentKeys.Add(keyCode);
             }
         }
-        InputEvent.Invoke(this.currentKeys);
+        if(currentKeys.Count > 0)
+        {
+            TargetInput.Invoke(this.currentKeys[0]);
+        }
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            ActionInput.Invoke(KeyCode.Space);
+        }
     }
 }

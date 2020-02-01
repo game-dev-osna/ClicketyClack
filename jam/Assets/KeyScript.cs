@@ -10,9 +10,16 @@ public class KeyScript : MonoBehaviour
     public float speed = 1;
     private KeyboardSoundPlayer keyboardSoundPlayer;
 
+    public bool IsRemoved => removed;
+    private bool removed;
+    private MeshRenderer renderer;
+    private Canvas canvas;
+
     // Start is called before the first frame update
     void Start()
     {
+        canvas = GetComponentInChildren<Canvas>();
+        renderer = GetComponent<MeshRenderer>();
         originalY = transform.position.y;
         keyboardSoundPlayer = GameObject.FindObjectOfType<KeyboardSoundPlayer>();
     }
@@ -29,6 +36,21 @@ public class KeyScript : MonoBehaviour
         {
             StartCoroutine(PressMove(originalY));
         }
+    }
+
+    public KeyCode Take()
+    {
+        renderer.enabled = false;
+        canvas.gameObject.SetActive(false);
+        removed = true;
+        return keyCode;
+    }
+
+    public void Put()
+    {
+        canvas.gameObject.SetActive(true);
+        removed = false;
+        renderer.enabled = true;
     }
 
     public IEnumerator PressMove(float targetY)
