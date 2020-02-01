@@ -23,12 +23,9 @@ public class KeyScript : MonoBehaviour
 
     static public UnityEvent KeyPutEvent = new UnityEvent();
 
-    private void Awake() {
+    private void Awake()
+    {
         originalPos = transform.position;
-        if(keyCode == KeyCode.T)
-        {
-            Debug.Log(originalPos);
-        }
     }
 
     // Start is called before the first frame update
@@ -63,11 +60,20 @@ public class KeyScript : MonoBehaviour
 
     public void ToDepot()
     {
+        Debug.Log("ToDepot");
         beforeDepotPos = transform.position;
         IsBroken = true;
+        GetComponent<BoxCollider>().enabled = false;
         renderer.enabled = true;
         canvas.gameObject.SetActive(true);
         removed = false;
+    }
+
+    public void FromDepot()
+    {
+        GetComponent<BoxCollider>().enabled = true;
+        IsBroken = false;
+        transform.position = beforeDepotPos;
     }
 
     public KeyCode Take()
@@ -89,10 +95,7 @@ public class KeyScript : MonoBehaviour
         canvas.gameObject.SetActive(true);
         removed = false;
         renderer.enabled = true;
-        Debug.Log(transform.position);
-        Debug.Log("Distance - " + Vector3.Distance(transform.position, originalPos));
         isOnRightSpot = Vector3.Distance(transform.position, originalPos) < 0.01f;
-        Debug.Log("Script - " + isOnRightSpot);
         KeyPutEvent.Invoke();
     }
 

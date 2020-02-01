@@ -15,7 +15,6 @@ public class Depot : MonoBehaviour
     private void Awake()
     {
         keyInputs = GameObject.FindObjectOfType<KeyboardInput>();
-        depotKey.GetComponent<BoxCollider>().enabled = false;
         depotKey.GetComponent<MeshRenderer>().enabled = false;
     }
 
@@ -46,8 +45,7 @@ public class Depot : MonoBehaviour
         var temp = toPickup;
         toPickup = null;
         if(temp) {
-            temp.IsBroken = false;
-            temp.transform.position = temp.beforeDepotPos;
+            temp.FromDepot();
         }
         return temp;
     }
