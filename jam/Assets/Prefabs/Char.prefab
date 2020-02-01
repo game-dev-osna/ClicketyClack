@@ -60,6 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a116575aa977d364280627bb0c65501a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerUI: {fileID: 0}
+  WinConditionKeys: 
   ControllKey: 92
   speedCurve:
     serializedVersion: 2
@@ -95,7 +97,11 @@ MonoBehaviour:
   keyAttachPoint: {fileID: 2779394657209877507}
   meshRenderer: {fileID: 5607527920810347261}
   trail: {fileID: 1722084610396415334}
-  heightOffset: {x: 0, y: 0, z: 0}
+  collisionEffect: {fileID: 4361793115736895076, guid: 39280f583544355499ac18fc53d0ed64,
+    type: 3}
+  takeEffect: {fileID: 3127626620467459737, guid: e3792912232dc804889e03b2b6f83782,
+    type: 3}
+  heightOffset: {x: 0, y: 0.14, z: 0}
 --- !u!54 &9041522620957380480
 Rigidbody:
   m_ObjectHideFlags: 0
