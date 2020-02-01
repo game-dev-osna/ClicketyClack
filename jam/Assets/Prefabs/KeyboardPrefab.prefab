@@ -173,6 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 286
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2589362021208622586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -281,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 112
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &4200247788845404462
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -389,6 +391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 61
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5661215747497956405
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -497,6 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 55
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &7355670965324157794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -605,6 +609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 98
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &3419950965810864456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -713,6 +718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 105
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &8626255205995767546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -821,6 +827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 114
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &3976602307626260562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1084,6 +1091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 0
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &1993134924169892784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1348,6 +1356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 0
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &71491106664764883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1534,6 +1543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 306
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &8387338950927048191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1876,6 +1886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 57
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5338229139381382973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2062,6 +2073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 100
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &1638106558882619379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2326,6 +2338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 97
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &6374846932232685547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2434,6 +2447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 13
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &3250999116955580482
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2620,6 +2634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 32
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &4531772825855267884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2884,6 +2899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 56
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5293682653583456107
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3070,6 +3086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 51
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &6639062584293194522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3178,6 +3195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 275
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2673143845022552652
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3364,6 +3382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 292
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2758660581282142511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3628,6 +3647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 49
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &3590179183985456445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4048,6 +4068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 277
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5602942037177609935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4156,6 +4177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 281
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &3631449617552213066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4264,6 +4286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 115
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &425767977436251771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4372,6 +4395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 101
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5698064565761313398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4792,6 +4816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 283
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5163298556363237170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4978,6 +5003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 111
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &6029580226071641736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5242,6 +5268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 274
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2364978628059599944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5350,6 +5377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 116
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5961968727785546522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5458,6 +5486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 92
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &158777335753969369
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5644,6 +5673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 48
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &1139407521152757320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5752,6 +5782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 302
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5631683294887370432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5860,6 +5891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 305
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &4820293256608529540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5968,6 +6000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 104
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5431906438767041377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6076,6 +6109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 46
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &3196102271878707871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6184,6 +6218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 301
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &580605090469811078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6292,6 +6327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 289
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &4517678746331336845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6400,6 +6436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 45
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &6402793671443361601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6664,6 +6701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 108
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &7373163339224924938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6928,6 +6966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 303
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5409953646766782161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7113,6 +7152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 310
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2359163788777239406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7299,6 +7339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 96
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &8085050449758443013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7485,6 +7526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 19
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &1670339365808381150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7593,6 +7635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 107
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &9080583405230265714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7701,6 +7744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 110
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &1709751244251692836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7809,6 +7853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 8
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &6054472545172087446
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7917,6 +7962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 91
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &4491092115930608540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8103,6 +8149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 304
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &8572994226663085225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8601,6 +8648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 290
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &1207266630142093874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8865,6 +8913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 285
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &7079207243909752569
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9051,6 +9100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 113
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &688889478785018455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9315,6 +9365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 50
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5594447812093872886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9423,6 +9474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 109
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &3164618349991598843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9687,6 +9739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 102
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &3590437301698580447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9795,6 +9848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 103
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &4248391762263084557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9903,6 +9957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 287
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2018646847553743563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10089,6 +10144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 278
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &4739717887292472377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10197,6 +10253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 307
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5788490940726330537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10382,6 +10439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 0
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &3000652073833165980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10568,6 +10626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 127
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2111128889048361564
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10676,6 +10735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 121
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &4687077594181278847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11018,6 +11078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 59
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2239359597490276297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11204,6 +11265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 280
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2587240550847167914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11390,6 +11452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 93
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &4171384656543970461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11576,6 +11639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 282
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2144827493793036366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11684,6 +11748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 276
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5909764083244861736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11792,6 +11857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 44
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &8296145239819458920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11900,6 +11966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 120
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &4797858308255649772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12282,6 +12349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 273
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &8997660709046422996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12390,6 +12458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 119
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &4513678777014204867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12810,6 +12879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 99
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2576541440913684780
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12918,6 +12988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 47
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2885436622789938509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13104,6 +13175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 118
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5719577793966383086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13290,6 +13362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 293
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &6088995640842337403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13398,6 +13471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 122
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &8284095983810656181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13506,6 +13580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 52
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &1500223874827379580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13652,6 +13727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ecf8f329eef9e34a98faa60281ea412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keys: []
 --- !u!1 &7450348953016048855
 GameObject:
   m_ObjectHideFlags: 0
@@ -13747,6 +13823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 53
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &3409098297489169166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13855,6 +13932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 308
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2738552006195590467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13963,6 +14041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 39
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &1073758395363849416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14929,6 +15008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 288
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &777386326425352392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15037,6 +15117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 27
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5865683854454884069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15223,6 +15304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 54
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &8691303440354018434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15331,6 +15413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 291
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &2339332062122949542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15517,6 +15600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 316
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &8744646263255708078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15781,6 +15865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 117
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &7448268483447280315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16279,6 +16364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 106
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &3753057868704270607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16387,6 +16473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 9
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &5432915783800621866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16495,6 +16582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 284
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &4879958300443462665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16603,6 +16691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCode: 279
   speed: 1
+  isOnRightSpot: 0
 --- !u!65 &896020006879122611
 BoxCollider:
   m_ObjectHideFlags: 0

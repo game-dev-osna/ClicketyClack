@@ -19,6 +19,8 @@ public class KeyScript : MonoBehaviour
     private Canvas canvas;
     private Vector3 originalPos;
 
+    static public UnityEvent KeyPutEvent = new UnityEvent();
+
     private void Awake() {
         originalPos = transform.position;
     }
@@ -37,7 +39,14 @@ public class KeyScript : MonoBehaviour
     {
         if(Input.GetKeyDown(keyCode))
         {
-            StartCoroutine(keyboardSoundPlayer.PlayKeyAudioasd());
+            if(keyCode == KeyCode.Space)
+            {
+                StartCoroutine(keyboardSoundPlayer.PlaySpacebarAudio());
+            }
+            else
+            {
+                StartCoroutine(keyboardSoundPlayer.PlayKeyAudioasd());
+            }
             StartCoroutine(PressMove(originalY-0.06f));
         }
         if(Input.GetKeyUp(keyCode))
@@ -62,6 +71,7 @@ public class KeyScript : MonoBehaviour
         renderer.enabled = true;
 
         isOnRightSpot = Vector3.Distance(transform.position, originalPos) < 0.01f;
+        KeyPutEvent.Invoke();
     }
 
     public IEnumerator PressMove(float targetY)

@@ -7,6 +7,11 @@ using DG.Tweening.Plugins.Options;
 
 public class Player : MonoBehaviour
 {
+    public PlayerUI PlayerUI;
+
+    public List<KeyCode> WinConditionKeys;
+    public static int NeedForWin = 3;
+
     public KeyCode ControllKey;
     public AnimationCurve speedCurve;
     public Animator animator;
@@ -45,6 +50,8 @@ public class Player : MonoBehaviour
         transform.position = keyInputs.codeToScript[ControllKey].transform.position + heightOffset;
         meshRenderer.material = new Material(meshRenderer.material);
         meshRenderer.material.SetColor("_BaseColor", inactiveColor);
+
+        KeyScript.KeyPutEvent.AddListener(CheckToWin);
     }
 
     private void Update() {
@@ -55,6 +62,32 @@ public class Player : MonoBehaviour
         if(Input.GetKeyUp(ControllKey))
         {
             DOTween.To(x => meshRenderer.material.SetColor("_BaseColor", Color.Lerp(activeColor, inactiveColor, x)), 0, 1, 0.25f);
+        }
+    }
+
+    private void CheckToWin()
+    {
+        updateUI();
+
+        bool allTrue = true;
+        foreach(var key in WinConditionKeys)
+        {
+            if (!keyInputs.codeToScript[key].IsOnRightSpot)
+            {
+                allTrue = false;
+                break;
+            }
+        }
+        if (allTrue)
+        {
+            //@TODO win
+        }
+    }
+    public void updateUI()
+    {
+        if (PlayerUI)
+        {
+            PlayerUI.SetWinKeys(WinConditionKeys);
         }
     }
 

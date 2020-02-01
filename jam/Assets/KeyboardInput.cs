@@ -8,6 +8,8 @@ using UnityEngine.Events;
 public class InputEvent : UnityEvent<KeyCode>{}
 public class KeyboardInput : MonoBehaviour
 {
+
+
     public GameObject keyboardParent;
     public List<KeyCode> controllKeys = new List<KeyCode>();
     public List<KeyCode> targetKeys = new List<KeyCode>();
@@ -41,6 +43,7 @@ public class KeyboardInput : MonoBehaviour
         {
             targetKeys.Add((KeyCode)i);
         }
+
     }
 
     private void Start()
@@ -52,6 +55,20 @@ public class KeyboardInput : MonoBehaviour
         for(int i = 0; i < targetKeys.Count; i++)
         {
             codeToScript[targetKeys[i]].transform.position = vecs[i];
+        }
+
+        var players = GameObject.FindObjectsOfType<Player>();
+        int index = 0;
+        foreach(var player in players)
+        {
+
+            for (int i = index; i < index + Player.NeedForWin; i++)
+            {
+                player.WinConditionKeys.Add(shuffled[i]);
+                Debug.Log(shuffled[i]);
+            }
+            index += Player.NeedForWin;
+            player.updateUI();
         }
     }
 
