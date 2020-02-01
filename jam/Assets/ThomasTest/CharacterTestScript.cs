@@ -12,23 +12,23 @@ public class CharacterTestScript : MonoBehaviour
         if (IsPickedUp)
         {
             IsPickedUp = false;
-            animator.SetTrigger("PutDown");
+            animator.SetBool("IsCarrying", false);
         }
         else
         {
             IsPickedUp = true;
-            animator.SetTrigger("PickUp");
+            animator.SetBool("IsCarrying", true);
         }
     }
     private void Stun()
     {
         Animator animator = GetComponent<Animator>();
-        animator.SetTrigger("StartStun");
+        animator.SetBool("IsStunned", true);
     }
     private void EndStun()
     {
         Animator animator = GetComponent<Animator>();
-        animator.SetTrigger("EndStun");
+        animator.SetBool("IsStunned", false);
     }
 
     // Start is called before the first frame update

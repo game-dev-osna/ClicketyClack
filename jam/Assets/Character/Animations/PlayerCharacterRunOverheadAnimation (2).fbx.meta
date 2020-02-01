@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c4bdc5620688ddd408dcf4cc7d41c4f1
+guid: 26a6f5a6ca8e9e84c8bd036bf4ae841f
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
@@ -39,7 +39,7 @@ ModelImporter:
       takeName: C4D Animation Take
       internalID: 0
       firstFrame: 0
-      lastFrame: 5
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
