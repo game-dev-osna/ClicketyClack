@@ -4,12 +4,14 @@ using UnityEngine;
 using DG.Tweening;
 using DG.Tweening.Core;
 using DG.Tweening.Plugins.Options;
+using UnityEngine.UI;
 
 public class PlayerUI : MonoBehaviour
 {
     public List<Transform> UITransforms;
     public Material correctMaterial;
     public Material wrongMaterial;
+    public Image fillbar;
 
     private KeyboardInput keyInputs;
     private bool isInitialized = false;
@@ -20,6 +22,10 @@ public class PlayerUI : MonoBehaviour
         isInitialized = true;
         int index = 3;
         int size = UITransforms.Count;
+        foreach(var tra in UITransforms)
+        {
+            tra.GetComponent<MeshRenderer>().material = wrongMaterial;
+        }
         foreach (var key in keys)
         {
             var keyScript = keyInputs.codeToScript[key];
@@ -33,7 +39,12 @@ public class PlayerUI : MonoBehaviour
         }
     }
 
-    public void updateUI(List<KeyCode> keys)
+    public void UpdateMeterUI(float percent)
+    {
+        fillbar.fillAmount = percent;
+    }
+
+    public void updateKeyUi(List<KeyCode> keys)
     {
         if (!isInitialized) AddWinKeys(keys);
         foreach (var key in keys)

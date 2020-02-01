@@ -44,6 +44,9 @@ public class Player : MonoBehaviour
     public GameObject CarriedCopy => carriedCopy;
     private GameObject carriedCopy;
 
+    public float maxControllTime;
+    public float controllTime;
+
     private void Start()
     {
         keyInputs = GameObject.FindObjectOfType<KeyboardInput>();
@@ -54,6 +57,7 @@ public class Player : MonoBehaviour
         meshRenderer.material = new Material(meshRenderer.material);
         meshRenderer.material.SetColor("_BaseColor", inactiveColor);
         KeyScript.KeyPutEvent.AddListener(CheckToWin);
+        controllTime = maxControllTime;
         SetMoving(false);
     }
 
@@ -66,6 +70,19 @@ public class Player : MonoBehaviour
         {
             DOTween.To(x => meshRenderer.material.SetColor("_BaseColor", Color.Lerp(activeColor, inactiveColor, x)), 0, 1, 0.25f);
         }
+        if(Input.GetKey(ControllKey))
+        {
+            controllTime = Mathf.Max(controllTime - Time.deltaTime, 0);
+            if(controllTime <= 0)
+            {
+                Stun(null);
+            }
+        }
+        else
+        {
+            controllTime = Mathf.Min(controllTime + Time.deltaTime, maxControllTime);
+        }
+        PlayerUI.UpdateMeterUI(controllTime / maxControllTime);
     }
 
     private void CheckToWin()
@@ -88,10 +105,7 @@ public class Player : MonoBehaviour
     }
     public void updateUI()
     {
-        if (PlayerUI)
-        {
-            PlayerUI.updateUI(WinConditionKeys);
-        }
+        PlayerUI.updateKeyUi(WinConditionKeys);
     }
 
     TweenerCore<Vector3, Vector3, VectorOptions> moveTween;
@@ -165,7 +179,7 @@ public class Player : MonoBehaviour
                     {
                         PutDown(hitKey);
                     }
-                    else if(carryingKey == KeyCode.None)
+                    else if(carryingKey == KeyCode.None && !hitKey.IsRemoved)
                     {
                         PickUp(hitKey);
                         SpawnEffect(takeEffect, transform.position + Vector3.up * 0.52f);
@@ -236,7 +250,10 @@ public class Player : MonoBehaviour
             KeySwap(other);
             SpawnEffect(collisionEffect, (transform.position + other.transform.position) / 2 + Vector3.up * 0.43f);
         }
-        transform.LookAt(other.transform);
+        if(other != null)
+        {
+            transform.LookAt(other.transform);
+        }
         isStunned = true;
         SetMoving(false);
         //collision animatiuon?!
@@ -249,6 +266,7 @@ public class Player : MonoBehaviour
     {
         var tempMine = carryingKey;
         var tempOther = other.CarryingKey;
+        if(carryingKey != KeyCode.None && other.CarryingKey != KeyCode.None) return;
 
         if(carryingKey != KeyCode.None)
         {
@@ -273,7 +291,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator Unstun()
     {
-        yield return new WaitForSeconds(stunDuration);
+        yield return new WaitForSeconds(Random.Range(stunDuration-0.75f, stunDuration+0.75f));
         isStunned = false;
         animator.SetBool("IsStunned", false);
     }
