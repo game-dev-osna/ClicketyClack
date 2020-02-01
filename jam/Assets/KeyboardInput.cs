@@ -43,6 +43,18 @@ public class KeyboardInput : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
+        var shuffled = targetKeys.OrderBy(x => UnityEngine.Random.value).ToArray();    
+
+        var vecs = shuffled.Select(k => codeToScript[k].transform.position).ToList();
+        for(int i = 0; i < targetKeys.Count; i++)
+        {
+            codeToScript[targetKeys[i]].transform.position = vecs[i];
+        }
+    }
+
     List<KeyCode> currentKeys = new List<KeyCode>();
     // Update is called once per frame
     void Update()

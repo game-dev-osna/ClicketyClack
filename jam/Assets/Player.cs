@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 
 public class Player : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class Player : MonoBehaviour
     public float stunDuration;
     public Color inactiveColor;
     public Color activeColor;
+    public Transform keyAttachPoint;
     public SkinnedMeshRenderer meshRenderer;
     private KeyboardInput keyInputs;
 
@@ -26,7 +29,11 @@ public class Player : MonoBehaviour
     private Vector3 target;
 
     private bool isStunned;
+
+    public KeyCode CarryingKey => carryingKey;
     private KeyCode carryingKey = KeyCode.None;
+
+    public GameObject CarriedCopy => carriedCopy;
     private GameObject carriedCopy;
 
     private void Start()
@@ -51,6 +58,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    TweenerCore<Vector3, Vector3, VectorOptions> moveTween;
     private void StartMoveToTarget(Vector3 target)
     {
         if(isStunned) return;
@@ -61,17 +69,32 @@ public class Player : MonoBehaviour
         transform.LookAt(this.target);
 
         //TODO with sequence to lerp up then steady then down
-        var moveTween = transform.DOMove(this.target, startDist / speed);
-        moveTween.OnUpdate(() => {
-            var t =(Mathf.Sin(moveTween.ElapsedPercentage().Remap(0,1,-Mathf.PI+Mathf.PI/2,Mathf.PI+Mathf.PI/2)) + 1) / 2.0f;
-            animator.SetFloat("Speed",t);
+        if(moveTween != null && moveTween.IsPlaying())
+        {
+            moveTween.SetTarget(this.target);
+            moveTween.ChangeValues(start, this.target, startDist/speed);
+        }
+        else
+        {
+            moveTween = transform.DOMove(this.target, startDist / speed);
+            moveTween.OnUpdate(() => {
+                var t =(Mathf.Sin(moveTween.ElapsedPercentage().Remap(0,1,-Mathf.PI+Mathf.PI/2,Mathf.PI+Mathf.PI/2)) + 1) / 2.0f;
+                animator.SetFloat("Speed",t);
 
-            Debug.Log("0: "+t);
-        });
-        moveTween.OnComplete(() => {
-            animator.SetFloat("Speed", 0);
-            isMoving = false;
-        });
+                if(!isMoving || isStunned)
+                {
+                    moveTween.Kill();
+                }
+            });
+            moveTween.OnComplete(() => {
+                animator.SetFloat("Speed", 0);
+                isMoving = false;
+            });
+            moveTween.OnKill(() => {
+                animator.SetFloat("Speed", 0);
+                isMoving = false;
+            });
+        }
     }
 
     private void OnTarget(KeyCode target)
@@ -85,52 +108,60 @@ public class Player : MonoBehaviour
 
     private void OnAction(KeyCode action)
     {
-        if(Input.GetKey(ControllKey))
+        if(!Input.GetKey(ControllKey)) return;
+        
+        if(action == KeyCode.Space && !isMoving && !isStunned)
         {
-            if(action == KeyCode.Space && !isMoving && !isStunned)
+            if(Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo ,0.4f))
             {
-                Debug.Log("Shitty shit");
-                if(Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo ,0.4f))
+                var hitKey = hitInfo.transform.GetComponent<KeyScript>();
+                if(hitKey && keyInputs.targetKeys.Contains(hitKey.keyCode))
                 {
-                    Debug.Log("hit");
-                    var hitKey = hitInfo.transform.GetComponent<KeyScript>();
-                    if(hitKey && keyInputs.targetKeys.Contains(hitKey.keyCode))
+                    if(hitKey.IsRemoved && carryingKey == hitKey.keyCode)
                     {
-                        Debug.Log("containing and bla");
-                        if(hitKey.IsRemoved && carryingKey == hitKey.keyCode)
-                        {
-                            hitKey.Put();
-                            carryingKey = KeyCode.None;
-                            Destroy(carriedCopy);
-                        }
-                        else if(carryingKey == KeyCode.None)
-                        {
-                            var keyCopy = Instantiate(hitKey, transform);
-                            carriedCopy = keyCopy.gameObject;
-                            Destroy(keyCopy);
-                            carriedCopy.transform.position = transform.position + Vector3.up * 0.3f;
-                            carryingKey = hitKey.Take();
-                        }
-                        else if(carryingKey != KeyCode.None)
-                        {
-                            var original = keyInputs.codeToScript[carryingKey];
-                            original.Put();
-                            Destroy(carriedCopy);
+                        PutDown(hitKey);
+                    }
+                    else if(carryingKey == KeyCode.None)
+                    {
+                        PickUp(hitKey);
+                    }
+                    else if(carryingKey != KeyCode.None)
+                    {
+                        var original = keyInputs.codeToScript[carryingKey];
+                        original.Put();
+                        Destroy(carriedCopy);
 
 
-                            var temp = original.transform.position;
-                            original.transform.position = hitKey.transform.position;
-                            hitKey.transform.position = temp;
-                            var keyCopy = Instantiate(hitKey, transform);
-                            carriedCopy = keyCopy.gameObject;
-                            Destroy(keyCopy);
-                            carriedCopy.transform.position = transform.position + Vector3.up * 0.3f;
-                            carryingKey = hitKey.Take();
-                        }
+                        var temp = original.transform.position;
+                        original.transform.position = hitKey.transform.position;
+                        hitKey.transform.position = temp;
+
+                        PickUp(hitKey);
                     }
                 }
             }
         }
+        
+    }
+
+    private void PutDown(KeyScript toPut)
+    {
+        toPut.Put();
+        carryingKey = KeyCode.None;
+        Destroy(carriedCopy);
+        animator.SetBool("IsCarrying", false);
+    }
+
+    private void PickUp(KeyScript toTake)
+    {
+        var keyCopy = Instantiate(toTake, keyAttachPoint);
+        carriedCopy = keyCopy.gameObject;
+        Destroy(keyCopy);
+        carriedCopy.transform.position = keyAttachPoint.transform.position;
+        carriedCopy.transform.localScale = Vector3.one * 0.9f;
+        carryingKey = toTake.Take();
+        
+        animator.SetBool("IsCarrying", true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -138,13 +169,13 @@ public class Player : MonoBehaviour
         var otherPlayer = other.gameObject.GetComponent<Player>();
         if(otherPlayer)   
         {
-            Debug.Log("COLLISONS "+Time.frameCount);
-            Stun(other.transform);
-            otherPlayer.Stun(transform);
+            Stun(otherPlayer);
+            otherPlayer.Stun(this, true);
+
         }
     }
 
-    public void Stun(Transform other)
+    public void Stun(Player other, bool swap = false)
     {
         if(isStunned) return;
         transform.LookAt(other.transform);
@@ -152,13 +183,45 @@ public class Player : MonoBehaviour
         isMoving = false;
         animator.SetFloat("Speed", 0);
         //collision animatiuon?!
-        transform.position += transform.forward * -1 * 0.04f;
+        transform.position += transform.forward * -1 * 0.1f;
+        animator.SetBool("IsStunned", true);
+        if(swap)
+        {
+            KeySwap(other);
+        }
         StartCoroutine(Unstun());
+    }
+
+    private void KeySwap(Player other)
+    {
+        var tempMine = carryingKey;
+        var tempOther = other.CarryingKey;
+
+        if(carryingKey != KeyCode.None)
+        {
+            PutDown(keyInputs.codeToScript[carryingKey]);
+        }
+
+        if(other.CarryingKey !=  KeyCode.None)
+        {
+            other.PutDown(keyInputs.codeToScript[other.CarryingKey]);
+        }
+
+        if(tempMine != KeyCode.None)
+        {
+            other.PickUp(keyInputs.codeToScript[tempMine]);
+        }
+
+        if(tempOther != KeyCode.None)
+        {
+            PickUp(keyInputs.codeToScript[tempOther]);
+        }
     }
 
     private IEnumerator Unstun()
     {
         yield return new WaitForSeconds(stunDuration);
         isStunned = false;
+        animator.SetBool("IsStunned", false);
     }
 }

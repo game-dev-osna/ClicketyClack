@@ -13528,6 +13528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5814120758459524818}
+  - component: {fileID: 6313037615221289942}
   m_Layer: 0
   m_Name: KeyboardPrefab
   m_TagString: Untagged
@@ -13639,6 +13640,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &6313037615221289942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418750055754142913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ecf8f329eef9e34a98faa60281ea412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7450348953016048855
 GameObject:
   m_ObjectHideFlags: 0

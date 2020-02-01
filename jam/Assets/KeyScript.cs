@@ -10,10 +10,18 @@ public class KeyScript : MonoBehaviour
     public float speed = 1;
     private KeyboardSoundPlayer keyboardSoundPlayer;
 
+    public bool isOnRightSpot;
+    public bool IsOnRightSpot => isOnRightSpot;
+
     public bool IsRemoved => removed;
     private bool removed;
     private MeshRenderer renderer;
     private Canvas canvas;
+    private Vector3 originalPos;
+
+    private void Awake() {
+        originalPos = transform.position;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +51,7 @@ public class KeyScript : MonoBehaviour
         renderer.enabled = false;
         canvas.gameObject.SetActive(false);
         removed = true;
+        isOnRightSpot = false;
         return keyCode;
     }
 
@@ -51,6 +60,8 @@ public class KeyScript : MonoBehaviour
         canvas.gameObject.SetActive(true);
         removed = false;
         renderer.enabled = true;
+
+        isOnRightSpot = Vector3.Distance(transform.position, originalPos) < 0.01f;
     }
 
     public IEnumerator PressMove(float targetY)
