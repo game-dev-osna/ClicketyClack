@@ -13,14 +13,20 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        
+        timer = 0;//30
     }
 
     void Update()
     {
         if(timer <= 0)
         {
-            //enemyPrefabs.
+            var prefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count)];
+            Instantiate(prefab);
+            timer = interval + Random.Range(-intervalSigma, intervalSigma);
+        }
+        else
+        {
+            timer -= Time.deltaTime; 
         }
     }
 }
