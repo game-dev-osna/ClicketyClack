@@ -20,6 +20,7 @@ public class KeyScript : MonoBehaviour
     private Canvas canvas;
     private Vector3 originalPos;
     public Vector3 beforeDepotPos;
+    private bool isPlayerOnKey;
 
     static public UnityEvent KeyPutEvent = new UnityEvent();
 
@@ -35,6 +36,7 @@ public class KeyScript : MonoBehaviour
         renderer = GetComponent<MeshRenderer>();
         originalY = transform.position.y;
         keyboardSoundPlayer = GameObject.FindObjectOfType<KeyboardSoundPlayer>();
+        isPlayerOnKey = false;
     }
 
     // Update is called once per frame
@@ -50,10 +52,38 @@ public class KeyScript : MonoBehaviour
             {
                 StartCoroutine(keyboardSoundPlayer.PlayKeyAudioasd());
             }
-            StartCoroutine(PressMove(originalY-0.06f));
+            StartCoroutine(PressMove(originalY - 0.06f));
         }
         if(Input.GetKeyUp(keyCode))
         {
+            if (isPlayerOnKey)
+            {
+                StartCoroutine(PressMove(originalY - 0.04f));
+            }
+            else
+            {
+                StartCoroutine(PressMove(originalY));
+            }
+        }
+        CheckIfPlayerAboveKey();
+    }
+
+    private void CheckIfPlayerAboveKey()
+    {
+        if(Physics.Raycast(transform.position, Vector3.up, out RaycastHit hitInfo, 2.0f))
+        {
+            var hitPlayer = hitInfo.transform.GetComponent<Player>();
+            if (hitPlayer && !isPlayerOnKey)
+            {
+                isPlayerOnKey = true;
+                StartCoroutine(keyboardSoundPlayer.PlayKeyAudioasd());
+                StartCoroutine(PressMove(originalY - 0.04f));
+            }
+        }
+        else if (isPlayerOnKey)
+        {
+            Debug.Log("test");
+            isPlayerOnKey = false;
             StartCoroutine(PressMove(originalY));
         }
     }
