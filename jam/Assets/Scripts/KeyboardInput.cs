@@ -48,7 +48,7 @@ public class KeyboardInput : MonoBehaviour
     public void Shuffle()
     {
         UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
-        var shuffled = targetKeys.OrderBy(x => UnityEngine.Random.value).Take(3).ToArray();    
+        var shuffled = targetKeys.OrderBy(x => UnityEngine.Random.value).Take(7).ToArray();    
         int[] dernged = Derange(shuffled.Length);
 
         var vecs = dernged.Select(i => codeToScript[shuffled[i]].transform.position).ToArray();
