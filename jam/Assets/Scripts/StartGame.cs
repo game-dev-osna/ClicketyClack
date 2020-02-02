@@ -13,7 +13,9 @@ public struct PlayerGameObjects
 }
 public class StartGame : MonoBehaviour
 {
+    public GameObject gameName;
     public GameObject credits;
+    public GameObject pressSpaceToStart;
     public Camera camera;
     public List<PlayerGameObjects> playerStuff = new List<PlayerGameObjects>();
     private List<Tweener> tweeners = new List<Tweener>();
@@ -54,6 +56,7 @@ public class StartGame : MonoBehaviour
         first.OnComplete(() => {
             float maxTime = 1.5f;
             credits.SetActive(false);
+            gameName.SetActive(false);
             foreach(var key in keyInputs.keys)
             {
 
@@ -101,10 +104,7 @@ public class StartGame : MonoBehaviour
                 {
                     go.SetActive(!active);
                 }
-                if(playerStuff.Select(x => x.player.gameObject).Any(g => g.activeInHierarchy))
-                {
-                    //SHOW PRESS SPACE TO START
-                }
+                pressSpaceToStart.SetActive(playerStuff.Select(x => x.player.gameObject).Any(g => g.activeInHierarchy));
             }
         }
         if(Input.GetKeyDown(KeyCode.Space))
@@ -132,6 +132,7 @@ public class StartGame : MonoBehaviour
         {
             p.player.SetToStart();
         }
+        pressSpaceToStart.SetActive(false);
     }
 
     private void Reset(bool doInSetup = true)
