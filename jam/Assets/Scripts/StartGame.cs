@@ -135,7 +135,7 @@ public class StartGame : MonoBehaviour
         pressSpaceToStart.SetActive(false);
     }
 
-    private void Reset(bool doInSetup = true)
+    public void Reset(bool doInSetup = true)
     {
         timer.Reset();
         enemySpawner.ShouldSpawn = false;

@@ -11,6 +11,9 @@ public class KeyboardInput : MonoBehaviour
     public GameObject keyboardParent;
     public List<KeyCode> controllKeys = new List<KeyCode>();
     public List<KeyCode> targetKeys = new List<KeyCode>();
+    public GameObject winCanvas;
+
+    private StartGame startGame;
 
     public Dictionary<KeyCode, KeyScript> codeToScript = new Dictionary<KeyCode, KeyScript>();
     public KeyScript[] keys;
@@ -19,6 +22,7 @@ public class KeyboardInput : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        startGame = FindObjectOfType<StartGame>();
         keys = keyboardParent.GetComponentsInChildren<KeyScript>();
         foreach(var keyScript in keys)
         {
@@ -73,14 +77,25 @@ public class KeyboardInput : MonoBehaviour
             if(!codeToScript[key].IsOnRightSpot)
             {
                 allTrue = false;
+                break;
             }
         }
         if(allTrue)
         {
             //win:
             Debug.Log("win");
+            winCanvas.SetActive(true);
+            StartCoroutine(RestartGame());
         }
     }
+
+    private IEnumerator RestartGame()
+    {
+        yield return new WaitForSeconds(3.0f);
+        winCanvas.SetActive(false);
+        startGame.Reset();
+    }
+
 
     List<KeyCode> currentKeys = new List<KeyCode>();
     // Update is called once per frame
