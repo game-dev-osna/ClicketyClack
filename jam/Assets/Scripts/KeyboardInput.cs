@@ -83,7 +83,6 @@ public class KeyboardInput : MonoBehaviour
         if(allTrue)
         {
             //win:
-            Debug.Log("win");
             winCanvas.SetActive(true);
             StartCoroutine(RestartGame());
         }
