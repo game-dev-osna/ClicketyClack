@@ -41,7 +41,7 @@ public class Sawnemey : MonoBehaviour
 
     private IEnumerator DestroyAfterDelay()
     {
-        yield return new WaitForSeconds(0.1);
+        yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
     }
 }
