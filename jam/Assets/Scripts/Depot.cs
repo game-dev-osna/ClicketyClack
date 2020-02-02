@@ -85,9 +85,7 @@ public class Depot : MonoBehaviour
 
     private IEnumerator DestroyAfterDelay(GameObject particleToDestroy)
     {
-        Debug.Log("test1");
         yield return new WaitForSeconds(1.5f);
         Destroy(particleToDestroy);
-        Debug.Log("test2");
     }
 }

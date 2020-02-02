@@ -131,7 +131,7 @@ public class StartGame : MonoBehaviour
         }
     }
 
-    private void Reset()
+    public void Reset()
     {
         timer.Reset();
         enemySpawner.ShouldSpawn = false;
