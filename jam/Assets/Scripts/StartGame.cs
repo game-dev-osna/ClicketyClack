@@ -40,7 +40,7 @@ public class StartGame : MonoBehaviour
             key.gameObject.SetActive(false);
         }
 
-        Reset();
+        Reset(false);
 
         Sequence sequence = DOTween.Sequence();
         camera.transform.position -= Vector3.forward * 74f;
@@ -83,6 +83,7 @@ public class StartGame : MonoBehaviour
                     }
                 }
         });
+        StartCoroutine(DelayInteraction());
     }
 
     private void Update()
@@ -131,11 +132,10 @@ public class StartGame : MonoBehaviour
         }
     }
 
-    private void Reset()
+    private void Reset(bool doInSetup = true)
     {
         timer.Reset();
         enemySpawner.ShouldSpawn = false;
-        inSetup = true;
 
         foreach(var p in playerStuff)
         {
@@ -145,5 +145,12 @@ public class StartGame : MonoBehaviour
                 go.SetActive(false);
             }
         }
+        inSetup = doInSetup;
+    }
+
+    private IEnumerator DelayInteraction()
+    {
+        yield return new WaitForSeconds(4.5f);
+        inSetup = true;
     }
 }
