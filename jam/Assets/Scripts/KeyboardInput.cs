@@ -40,7 +40,6 @@ public class KeyboardInput : MonoBehaviour
             targetKeys.Add((KeyCode)i);
         }
         targetKeys.Add((KeyCode)48);
-        targetKeys.Add((KeyCode)280);
         for(int i = 50; i <= 57; i++)
         {
             targetKeys.Add((KeyCode)i);
@@ -60,6 +59,7 @@ public int shuffleAmount;
         {
             codeToScript[shuffled[i]].transform.position = vecs[i];
         }
+        targetKeys.Add((KeyCode)280);
         KeyScript.KeyPutEvent.AddListener(WinConCheck);
     }
 

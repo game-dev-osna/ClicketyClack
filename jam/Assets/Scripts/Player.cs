@@ -154,7 +154,7 @@ public class Player : MonoBehaviour
             if(Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo ,0.4f))
             {
                 var hitKey = hitInfo.transform.GetComponent<KeyScript>();
-                if(hitKey && keyInputs.targetKeys.Contains(hitKey.keyCode))
+                if(hitKey && keyInputs.targetKeys.Contains(hitKey.keyCode) && hitKey.keyCode != KeyCode.PageUp)
                 {
                     if(hitKey.IsRemoved && carryingKey == hitKey.keyCode)
                     {
@@ -236,10 +236,13 @@ public class Player : MonoBehaviour
         {
             //Effect
 
-            depot.PlaceInDepot(keyInputs.codeToScript[carryingKey]);
-            Destroy(carriedCopy);
-            animator.SetBool("IsCarrying", false);
-            carryingKey = KeyCode.None;
+            if(carryingKey != KeyCode.None)
+            {
+                depot.PlaceInDepot(keyInputs.codeToScript[carryingKey]);
+                Destroy(carriedCopy);
+                animator.SetBool("IsCarrying", false);
+                carryingKey = KeyCode.None;
+            }
             transform.position = keyInputs.codeToScript[ControllKey].transform.position + heightOffset;
             Stun(null);
         }
@@ -260,7 +263,7 @@ public class Player : MonoBehaviour
         isStunned = true;
         SetMoving(false);
         //collision animatiuon?!
-        transform.position += transform.forward * -1 * 0.1f;
+        transform.position += new Vector3(transform.forward.x, 0, transform.forward.z) * -1 * 0.1f;
         animator.SetBool("IsStunned", true);
         StartCoroutine(Unstun());
     }

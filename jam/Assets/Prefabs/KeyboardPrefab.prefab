@@ -175,6 +175,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2589362021208622586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -285,6 +286,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4200247788845404462
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -395,6 +397,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5661215747497956405
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -505,6 +508,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &7355670965324157794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -615,6 +619,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3419950965810864456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -725,6 +730,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8626255205995767546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -835,6 +841,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3976602307626260562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1100,6 +1107,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1993134924169892784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1366,6 +1374,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &71491106664764883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1554,6 +1563,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8387338950927048191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1898,6 +1908,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5338229139381382973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2086,6 +2097,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1638106558882619379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2352,6 +2364,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &6374846932232685547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2462,6 +2475,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3250999116955580482
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2650,6 +2664,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4531772825855267884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2916,6 +2931,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5293682653583456107
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3104,6 +3120,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &6639062584293194522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3214,6 +3231,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2673143845022552652
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3402,6 +3420,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2758660581282142511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3668,6 +3687,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3590179183985456445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4090,6 +4110,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5602942037177609935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4200,6 +4221,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3631449617552213066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4310,6 +4332,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &425767977436251771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4420,6 +4443,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5698064565761313398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4842,6 +4866,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5163298556363237170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5030,6 +5055,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &6029580226071641736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5296,6 +5322,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2364978628059599944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5406,6 +5433,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5961968727785546522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5516,6 +5544,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &158777335753969369
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5704,6 +5733,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1139407521152757320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5814,6 +5844,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5631683294887370432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5924,6 +5955,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4820293256608529540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6034,6 +6066,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5431906438767041377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6144,6 +6177,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3196102271878707871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6254,6 +6288,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &580605090469811078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6364,6 +6399,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4517678746331336845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6474,6 +6510,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &6402793671443361601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6740,6 +6777,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &7373163339224924938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7006,6 +7044,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5409953646766782161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7193,6 +7232,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2359163788777239406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7381,6 +7421,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8085050449758443013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7569,6 +7610,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1670339365808381150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7679,6 +7721,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &9080583405230265714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7789,6 +7832,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1709751244251692836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7899,6 +7943,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &6054472545172087446
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8009,6 +8054,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4491092115930608540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8197,6 +8243,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8572994226663085225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8697,6 +8744,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1207266630142093874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8963,6 +9011,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &7079207243909752569
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9151,6 +9200,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &688889478785018455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9417,6 +9467,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5594447812093872886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9527,6 +9578,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3164618349991598843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9793,6 +9845,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3590437301698580447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9903,6 +9956,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4248391762263084557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10013,6 +10067,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2018646847553743563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10201,6 +10256,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4739717887292472377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10311,6 +10367,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5788490940726330537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10498,6 +10555,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3000652073833165980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10686,6 +10744,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2111128889048361564
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10796,6 +10855,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4687077594181278847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11140,6 +11200,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2239359597490276297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11244,6 +11305,7 @@ GameObject:
   - component: {fileID: 798253707700539994}
   - component: {fileID: 5680687465252803735}
   - component: {fileID: 2587240550847167914}
+  - component: {fileID: 3713567922340354167}
   m_Layer: 0
   m_Name: BildUp
   m_TagString: Untagged
@@ -11328,6 +11390,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2587240550847167914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11341,6 +11404,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.36648956, y: 0.19762264, z: 0.36648956}
   m_Center: {x: 0, y: -0.00579378, z: 0}
+--- !u!114 &3713567922340354167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005731845870027630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b0809a8d66504fa5bfe5b507af484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depotKey: {fileID: 5680687465252803735}
 --- !u!1 &6101798053212725183
 GameObject:
   m_ObjectHideFlags: 0
@@ -11516,6 +11592,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4171384656543970461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11704,6 +11781,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2144827493793036366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11814,6 +11892,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5909764083244861736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11924,6 +12003,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8296145239819458920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12034,6 +12114,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4797858308255649772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12418,6 +12499,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8997660709046422996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12528,6 +12610,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4513678777014204867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12950,6 +13033,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2576541440913684780
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13060,6 +13144,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2885436622789938509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13248,6 +13333,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5719577793966383086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13436,6 +13522,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &6088995640842337403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13546,6 +13633,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8284095983810656181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13656,6 +13744,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1500223874827379580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13886,6 +13975,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3409098297489169166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13996,6 +14086,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2738552006195590467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14106,6 +14197,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1073758395363849416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15074,6 +15166,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &777386326425352392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15184,6 +15277,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5865683854454884069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15372,6 +15466,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8691303440354018434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15482,6 +15577,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2339332062122949542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15670,6 +15766,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8744646263255708078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15936,6 +16033,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &7448268483447280315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16436,6 +16534,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3753057868704270607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16546,6 +16645,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5432915783800621866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16656,6 +16756,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4879958300443462665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16766,6 +16867,7 @@ MonoBehaviour:
   speed: 1
   isOnRightSpot: 0
   IsBroken: 0
+  beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &896020006879122611
 BoxCollider:
   m_ObjectHideFlags: 0
