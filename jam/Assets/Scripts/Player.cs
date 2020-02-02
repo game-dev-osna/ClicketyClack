@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     public ParticleSystem trail;
     public GameObject collisionEffect;
     public GameObject takeEffect;
+    public GameObject checkEffect;
     private KeyboardInput keyInputs;
     private Depot depot;
 
@@ -159,6 +160,11 @@ public class Player : MonoBehaviour
                     if(hitKey.IsRemoved && carryingKey == hitKey.keyCode)
                     {
                         PutDown(hitKey);
+                        if (hitKey.isOnRightSpot)
+                        {
+                            Debug.Log("test2");
+                            SpawnEffect(checkEffect, transform.position + Vector3.up * 0.52f);
+                        }
                     }
                     else if(carryingKey == KeyCode.None && !hitKey.IsRemoved)
                     {
@@ -177,7 +183,14 @@ public class Player : MonoBehaviour
                         hitKey.transform.position = temp;
 
                         PickUp(hitKey);
-                        SpawnEffect(takeEffect, transform.position + Vector3.up * 0.52f);
+                        if (original.isOnRightSpot)
+                        {
+                            SpawnEffect(checkEffect, transform.position + Vector3.up * 0.52f);
+                        }
+                        else
+                        {
+                            SpawnEffect(takeEffect, transform.position + Vector3.up * 0.52f);
+                        }
                     }
                 }
                 var hitDepot = hitInfo.transform.GetComponent<Depot>();

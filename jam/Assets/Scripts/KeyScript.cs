@@ -82,7 +82,7 @@ public class KeyScript : MonoBehaviour
         }
         else if (isPlayerOnKey)
         {
-            Debug.Log("test");
+            //Debug.Log("test");
             isPlayerOnKey = false;
             StartCoroutine(PressMove(originalY));
         }
@@ -125,7 +125,9 @@ public class KeyScript : MonoBehaviour
         canvas.gameObject.SetActive(true);
         removed = false;
         renderer.enabled = true;
-        isOnRightSpot = Vector3.Distance(transform.position, originalPos) < 0.01f;
+        isOnRightSpot = Vector3.Distance(transform.position, originalPos) < 0.05f;
+        Debug.Log("Distance - " + Vector3.Distance(transform.position, originalPos));
+        Debug.Log(isOnRightSpot);
         KeyPutEvent.Invoke();
     }
 
