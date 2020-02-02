@@ -121,11 +121,16 @@ public class KeyScript : MonoBehaviour
         canvas.gameObject.SetActive(true);
         removed = false;
         renderer.enabled = true;
-        isOnRightSpot = Vector3.Distance(transform.position, originalPos) < 0.05f;
+        DoRightSpotCheck();
         //Debug.Log("Distance - " + Vector3.Distance(transform.position, originalPos));
         //Debug.Log(isOnRightSpot);
         SpawnParticleEffect(transform.position);
         KeyPutEvent.Invoke();
+    }
+
+    public void DoRightSpotCheck()
+    {
+        isOnRightSpot = Vector3.Distance(transform.position, originalPos) < 0.05f;
     }
 
     public IEnumerator PressMove(float targetY)
@@ -151,6 +156,7 @@ public class KeyScript : MonoBehaviour
 
         yield return null;
     }
+
     private void SpawnParticleEffect(Vector3 pos)
     {
         var effect = Instantiate(particleEffectPlop, pos, Quaternion.identity);

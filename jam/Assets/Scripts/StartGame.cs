@@ -13,6 +13,7 @@ public struct PlayerGameObjects
 }
 public class StartGame : MonoBehaviour
 {
+    public GameObject credits;
     public Camera camera;
     public List<PlayerGameObjects> playerStuff = new List<PlayerGameObjects>();
     private List<Tweener> tweeners = new List<Tweener>();
@@ -52,6 +53,7 @@ public class StartGame : MonoBehaviour
 
         first.OnComplete(() => {
             float maxTime = 1.5f;
+            credits.SetActive(false);
             foreach(var key in keyInputs.keys)
             {
 
