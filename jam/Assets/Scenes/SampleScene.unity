@@ -3328,6 +3328,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3713567922340354167, guid: d866f3542d91ac54395ccfe2f494a8b9,
+        type: 3}
+      propertyPath: plopEffect
+      value: 
+      objectReference: {fileID: 3206824456976662186, guid: 4722e3a0d3cc8f743ad3defa8b6c5361,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d866f3542d91ac54395ccfe2f494a8b9, type: 3}
 --- !u!1 &1191027823

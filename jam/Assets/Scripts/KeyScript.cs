@@ -13,6 +13,8 @@ public class KeyScript : MonoBehaviour
     public bool isOnRightSpot;
     public bool IsOnRightSpot => isOnRightSpot;
 
+    public GameObject particleEffectPlop;
+
     public bool IsBroken;
     public bool IsRemoved => removed;
     private bool removed;
@@ -120,8 +122,9 @@ public class KeyScript : MonoBehaviour
         removed = false;
         renderer.enabled = true;
         isOnRightSpot = Vector3.Distance(transform.position, originalPos) < 0.05f;
-        Debug.Log("Distance - " + Vector3.Distance(transform.position, originalPos));
-        Debug.Log(isOnRightSpot);
+        //Debug.Log("Distance - " + Vector3.Distance(transform.position, originalPos));
+        //Debug.Log(isOnRightSpot);
+        SpawnParticleEffect(transform.position);
         KeyPutEvent.Invoke();
     }
 
@@ -147,5 +150,19 @@ public class KeyScript : MonoBehaviour
         transform.position = new Vector3(transform.position.x, targetY, transform.position.z);
 
         yield return null;
+    }
+    private void SpawnParticleEffect(Vector3 pos)
+    {
+        var effect = Instantiate(particleEffectPlop, pos, Quaternion.identity);
+        effect.GetComponentInChildren<ParticleSystem>().Play();
+        StartCoroutine(DestroyAfterDelay(effect));
+    }
+
+    private IEnumerator DestroyAfterDelay(GameObject particleToDestroy)
+    {
+        Debug.Log("test1");
+        yield return new WaitForSeconds(1.5f);
+        Destroy(particleToDestroy);
+        Debug.Log("test2");
     }
 }

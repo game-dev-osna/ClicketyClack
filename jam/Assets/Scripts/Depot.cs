@@ -7,6 +7,7 @@ public class Depot : MonoBehaviour
 {
     public KeyScript depotKey;
     public Queue<KeyScript> keys = new Queue<KeyScript>();
+    public GameObject plopEffect;
 
     private KeyScript toPickup;
     private float timer;
@@ -31,13 +32,18 @@ public class Depot : MonoBehaviour
         toPickup = keys.Dequeue();
         toPickup.gameObject.SetActive(true);
         toPickup.transform.position = depotKey.transform.position;
+        UpdateQueueVisualisation(null, toPickup);
     }
 
     public void PlaceInDepot(KeyScript keyScript)
     {
         keyScript.ToDepot();
-        keyScript.gameObject.SetActive(false);
+        //keyScript.gameObject.SetActive(false);
         keys.Enqueue(keyScript);
+        if (toPickup)
+        {
+            UpdateQueueVisualisation(keyScript);
+        }
     }
 
     public KeyScript TakeFromDepot()
@@ -50,15 +56,38 @@ public class Depot : MonoBehaviour
         return temp;
     }
 
-    /*public void UpdateQueueVisualisation()
+    public void UpdateQueueVisualisation(KeyScript newKey = null, KeyScript dequeueKey = null)
     {
         int index = 1;
         foreach (var key in keys)
         {
             key.gameObject.SetActive(true);
-            key.transform.position = depotKey.transform.position;
-            key.transform.position
+            key.transform.position = depotKey.transform.position + (Vector3.right * (0.45f * index));
             index++;
         }
-    }*/
+        if (newKey)
+        {
+            Debug.Log(newKey.transform.position);
+            SpawnParticleEffect(newKey.transform.position);
+        }
+        if (dequeueKey)
+        {
+            Debug.Log(dequeueKey.transform.position);
+            SpawnParticleEffect(dequeueKey.transform.position);
+        }
+    }
+    private void SpawnParticleEffect(Vector3 pos)
+    {
+        var effect = Instantiate(plopEffect, pos, Quaternion.identity);
+        effect.GetComponentInChildren<ParticleSystem>().Play();
+        StartCoroutine(DestroyAfterDelay(effect));
+    }
+
+    private IEnumerator DestroyAfterDelay(GameObject particleToDestroy)
+    {
+        Debug.Log("test1");
+        yield return new WaitForSeconds(1.5f);
+        Destroy(particleToDestroy);
+        Debug.Log("test2");
+    }
 }
