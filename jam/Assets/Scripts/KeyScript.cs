@@ -18,7 +18,7 @@ public class KeyScript : MonoBehaviour
     private bool removed;
     private MeshRenderer renderer;
     private Canvas canvas;
-    private Vector3 originalPos;
+    public Vector3 originalPos;
     public Vector3 beforeDepotPos;
     private bool isPlayerOnKey;
 
@@ -27,14 +27,9 @@ public class KeyScript : MonoBehaviour
     private void Awake()
     {
         originalPos = transform.position;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
+        originalY = transform.position.y;
         canvas = GetComponentInChildren<Canvas>();
         renderer = GetComponent<MeshRenderer>();
-        originalY = transform.position.y;
         keyboardSoundPlayer = GameObject.FindObjectOfType<KeyboardSoundPlayer>();
         isPlayerOnKey = false;
     }

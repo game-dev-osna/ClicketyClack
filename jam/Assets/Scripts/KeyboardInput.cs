@@ -8,9 +8,6 @@ using UnityEngine.Events;
 public class InputEvent : UnityEvent<KeyCode>{}
 public class KeyboardInput : MonoBehaviour
 {
-
-
-
     public GameObject keyboardParent;
     public List<KeyCode> controllKeys = new List<KeyCode>();
     public List<KeyCode> targetKeys = new List<KeyCode>();
@@ -47,8 +44,8 @@ public class KeyboardInput : MonoBehaviour
 
     }
 
-public int shuffleAmount;
-    private void Start()
+    public int shuffleAmount;
+    public void Shuffle()
     {
         UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
         var shuffled = targetKeys.OrderBy(x => UnityEngine.Random.value).Take(12).ToArray();    

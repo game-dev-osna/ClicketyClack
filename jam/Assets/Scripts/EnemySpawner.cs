@@ -7,17 +7,19 @@ public class EnemySpawner : MonoBehaviour
     public List<GameObject> enemyPrefabs = new List<GameObject>();
 
 
+    public bool ShouldSpawn;
     public float interval;
     public float intervalSigma;
     private float timer;
 
     void Start()
     {
-        timer = 0;//30
+        timer = 30;
     }
 
     void Update()
     {
+        if(!ShouldSpawn) return;
         if(timer <= 0)
         {
             var prefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count)];

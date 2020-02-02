@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     public ParticleSystem stunEffect;
     private KeyboardInput keyInputs;
     private Depot depot;
+    private StartGame startGameManager;
 
     public Vector3 heightOffset = Vector3.zero;
 
@@ -51,14 +52,17 @@ public class Player : MonoBehaviour
     public float maxControllTime;
     public float controllTime;
 
-    private void Start()
-    {
+    private void Awake() {
         keyInputs = GameObject.FindObjectOfType<KeyboardInput>();
         depot = GameObject.FindObjectOfType<Depot>();
+        startGameManager = GameObject.FindObjectOfType<StartGame>();
+    }
+
+    private void Start()
+    {
         keyInputs.TargetInput.AddListener(OnTarget);
         keyInputs.ActionInput.AddListener(OnAction);
 
-        transform.position = keyInputs.codeToScript[ControllKey].transform.position + heightOffset;
         meshRenderer.material = new Material(meshRenderer.material);
         meshRenderer.material.SetColor("_BaseColor", inactiveColor);
         controllTime = maxControllTime;
@@ -66,9 +70,16 @@ public class Player : MonoBehaviour
         enemyLayer = LayerMask.NameToLayer("Enemy");
 
         stunEffect.gameObject.SetActive(false);
+        SetToStart();
+    }
+
+    public void SetToStart()
+    {
+        transform.position = keyInputs.codeToScript[ControllKey].transform.position + heightOffset;
     }
 
     private void Update() {
+        if(startGameManager.inSetup) return;
         if(Input.GetKeyDown(ControllKey))
         {
             DOTween.To(x => meshRenderer.material.SetColor("_BaseColor", Color.Lerp(inactiveColor, activeColor, x)), 0, 1, 0.25f);
