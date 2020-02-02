@@ -6,15 +6,21 @@ using DG.Tweening;
 public class Sawnemey : MonoBehaviour
 {
     public List<Vector3> startPoints = new List<Vector3>();
+    
     // Start is called before the first frame update
     void Start()
     {
+        var audioSource = GetComponent<AudioSource>();
+        audioSource.Stop();
         transform.position = startPoints[Random.Range(0,startPoints.Count)];
         //-2.779
         var target = new Vector3(-2.779f, transform.position.y, transform.position.z); 
         var targetEnd = new Vector3(8.779f, transform.position.y, transform.position.z); 
         Sequence sequence = DOTween.Sequence();
         var first = transform.DOMove(target, 3).Pause();
+        first.OnComplete(() => {
+            audioSource.Play();
+        });
         var second = DOTween.To(x => {
             transform.Rotate(transform.forward, -360 * Time.deltaTime);
         }, 0, 1, 2f).Pause();
@@ -35,7 +41,7 @@ public class Sawnemey : MonoBehaviour
 
     private IEnumerator DestroyAfterDelay()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.1);
         Destroy(gameObject);
     }
 }
