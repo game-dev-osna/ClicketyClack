@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     public GameObject collisionEffect;
     public GameObject takeEffect;
     public GameObject checkEffect;
+    public ParticleSystem stunEffect;
     private KeyboardInput keyInputs;
     private Depot depot;
 
@@ -62,6 +63,8 @@ public class Player : MonoBehaviour
         controllTime = maxControllTime;
         SetMoving(false);
         enemyLayer = LayerMask.NameToLayer("Enemy");
+
+        stunEffect.gameObject.SetActive(false);
     }
 
     private void Update() {
@@ -310,8 +313,15 @@ public class Player : MonoBehaviour
 
     private IEnumerator Unstun()
     {
-        yield return new WaitForSeconds(Random.Range(stunDuration-0.75f, stunDuration+0.75f));
+        var stunTime = Random.Range(stunDuration-0.75f, stunDuration+0.75f);
+        stunEffect.gameObject.SetActive(true);
+        var main = stunEffect.main;
+        main.duration = stunTime;
+        stunEffect.Clear();
+        stunEffect.Play();
+        yield return new WaitForSeconds(stunTime);
         isStunned = false;
         animator.SetBool("IsStunned", false);
+        stunEffect.gameObject.SetActive(false);
     }
 }
