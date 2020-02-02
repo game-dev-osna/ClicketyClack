@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44141468, g: 0.4902447, b: 0.5702766, a: 1}
+  m_IndirectSpecularColor: {r: 0.44141433, g: 0.49024385, b: 0.57027584, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -433,6 +433,11 @@ PrefabInstance:
       propertyPath: PlayerUI
       value: 
       objectReference: {fileID: 164338816}
+    - target: {fileID: 36276773655546435, guid: 6f81a6eafd551984cb74625a72484ae3,
+        type: 3}
+      propertyPath: MainCamera
+      value: 
+      objectReference: {fileID: 963194227}
     - target: {fileID: 5607527920810347261, guid: 6f81a6eafd551984cb74625a72484ae3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1112,6 +1117,11 @@ PrefabInstance:
       propertyPath: PlayerUI
       value: 
       objectReference: {fileID: 743071906}
+    - target: {fileID: 36276773655546435, guid: 6f81a6eafd551984cb74625a72484ae3,
+        type: 3}
+      propertyPath: MainCamera
+      value: 
+      objectReference: {fileID: 963194227}
     - target: {fileID: 5607527920810347261, guid: 6f81a6eafd551984cb74625a72484ae3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3611,6 +3621,11 @@ PrefabInstance:
       propertyPath: PlayerUI
       value: 
       objectReference: {fileID: 1273340100}
+    - target: {fileID: 36276773655546435, guid: 6f81a6eafd551984cb74625a72484ae3,
+        type: 3}
+      propertyPath: MainCamera
+      value: 
+      objectReference: {fileID: 963194227}
     - target: {fileID: 5607527920810347261, guid: 6f81a6eafd551984cb74625a72484ae3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4214,5 +4229,10 @@ PrefabInstance:
       propertyPath: PlayerUI
       value: 
       objectReference: {fileID: 2104121159}
+    - target: {fileID: 36276773655546435, guid: 6f81a6eafd551984cb74625a72484ae3,
+        type: 3}
+      propertyPath: MainCamera
+      value: 
+      objectReference: {fileID: 963194227}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f81a6eafd551984cb74625a72484ae3, type: 3}

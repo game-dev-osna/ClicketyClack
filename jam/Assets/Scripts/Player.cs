@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     public List<KeyCode> WinConditionKeys;
     public static int NeedForWin = 3;
+    public Camera MainCamera;
 
     public KeyCode ControllKey;
     public AnimationCurve speedCurve;
@@ -214,7 +215,7 @@ public class Player : MonoBehaviour
     private void SpawnEffect(GameObject effectPrefab, Vector3 pos)
     {
         var effect = Instantiate(effectPrefab, pos , Quaternion.identity);
-        effect.transform.LookAt(Camera.main.transform);
+        effect.transform.LookAt(MainCamera.transform);
         effect.transform.forward = effect.transform.forward * -1;
     }
 
