@@ -49,4 +49,16 @@ public class Depot : MonoBehaviour
         }
         return temp;
     }
+
+    /*public void UpdateQueueVisualisation()
+    {
+        int index = 1;
+        foreach (var key in keys)
+        {
+            key.gameObject.SetActive(true);
+            key.transform.position = depotKey.transform.position;
+            key.transform.position
+            index++;
+        }
+    }*/
 }
