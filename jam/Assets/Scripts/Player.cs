@@ -314,12 +314,12 @@ public class Player : MonoBehaviour
     private IEnumerator Unstun()
     {
         var stunTime = Random.Range(stunDuration-0.75f, stunDuration+0.75f);
-        stunEffect.Stop();
         stunEffect.Clear();
-        stunEffect.gameObject.SetActive(true);
+        stunEffect.Stop();
         var main = stunEffect.main;
         main.duration = stunTime;
         stunEffect.Play();
+        stunEffect.gameObject.SetActive(true);
         yield return new WaitForSeconds(stunTime);
         isStunned = false;
         animator.SetBool("IsStunned", false);
