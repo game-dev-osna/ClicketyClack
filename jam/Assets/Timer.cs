@@ -10,9 +10,11 @@ public class Timer : MonoBehaviour
     public bool running;
     private float time;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         text = GetComponent<TMPro.TextMeshProUGUI>();
+        text.text = "";
+        running = false;
     }
 
     // Update is called once per frame
@@ -24,5 +26,16 @@ public class Timer : MonoBehaviour
             var t = TimeSpan.FromSeconds(time);
             text.text = string.Format("{0:D2}:{1:D2}", t.Minutes, t.Seconds);
         }
+    }
+
+    public void StartTimer()
+    {
+        running = true;
+    }
+
+    public void Reset()
+    {
+        running = false;
+        text.text = "";
     }
 }
