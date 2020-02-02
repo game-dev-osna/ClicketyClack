@@ -35,12 +35,6 @@ public class Penemy : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private IEnumerator DestroyAfterDelay()
     {
         yield return new WaitForSeconds(1);

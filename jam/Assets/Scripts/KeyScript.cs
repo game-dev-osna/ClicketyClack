@@ -82,7 +82,6 @@ public class KeyScript : MonoBehaviour
         }
         else if (isPlayerOnKey)
         {
-            Debug.Log("test");
             isPlayerOnKey = false;
             StartCoroutine(PressMove(originalY));
         }
