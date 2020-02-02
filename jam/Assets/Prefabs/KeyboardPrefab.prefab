@@ -174,7 +174,10 @@ MonoBehaviour:
   keyCode: 286
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2589362021208622586
 BoxCollider:
@@ -285,7 +288,10 @@ MonoBehaviour:
   keyCode: 112
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4200247788845404462
 BoxCollider:
@@ -396,7 +402,10 @@ MonoBehaviour:
   keyCode: 61
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5661215747497956405
 BoxCollider:
@@ -507,7 +516,10 @@ MonoBehaviour:
   keyCode: 55
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &7355670965324157794
 BoxCollider:
@@ -618,7 +630,10 @@ MonoBehaviour:
   keyCode: 98
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3419950965810864456
 BoxCollider:
@@ -729,7 +744,10 @@ MonoBehaviour:
   keyCode: 105
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8626255205995767546
 BoxCollider:
@@ -840,7 +858,10 @@ MonoBehaviour:
   keyCode: 114
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3976602307626260562
 BoxCollider:
@@ -1106,7 +1127,10 @@ MonoBehaviour:
   keyCode: 0
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1993134924169892784
 BoxCollider:
@@ -1373,7 +1397,10 @@ MonoBehaviour:
   keyCode: 0
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &71491106664764883
 BoxCollider:
@@ -1562,7 +1589,10 @@ MonoBehaviour:
   keyCode: 306
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8387338950927048191
 BoxCollider:
@@ -1921,7 +1951,10 @@ MonoBehaviour:
   keyCode: 57
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5338229139381382973
 BoxCollider:
@@ -2110,7 +2143,10 @@ MonoBehaviour:
   keyCode: 100
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1638106558882619379
 BoxCollider:
@@ -2377,7 +2413,10 @@ MonoBehaviour:
   keyCode: 97
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &6374846932232685547
 BoxCollider:
@@ -2488,7 +2527,10 @@ MonoBehaviour:
   keyCode: 13
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3250999116955580482
 BoxCollider:
@@ -2677,7 +2719,10 @@ MonoBehaviour:
   keyCode: 32
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4531772825855267884
 BoxCollider:
@@ -2944,7 +2989,10 @@ MonoBehaviour:
   keyCode: 56
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5293682653583456107
 BoxCollider:
@@ -3133,7 +3181,10 @@ MonoBehaviour:
   keyCode: 51
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &6639062584293194522
 BoxCollider:
@@ -3244,7 +3295,10 @@ MonoBehaviour:
   keyCode: 275
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2673143845022552652
 BoxCollider:
@@ -3433,7 +3487,10 @@ MonoBehaviour:
   keyCode: 292
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2758660581282142511
 BoxCollider:
@@ -3700,7 +3757,10 @@ MonoBehaviour:
   keyCode: 49
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3590179183985456445
 BoxCollider:
@@ -4123,7 +4183,10 @@ MonoBehaviour:
   keyCode: 277
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5602942037177609935
 BoxCollider:
@@ -4234,7 +4297,10 @@ MonoBehaviour:
   keyCode: 281
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3631449617552213066
 BoxCollider:
@@ -4345,7 +4411,10 @@ MonoBehaviour:
   keyCode: 115
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &425767977436251771
 BoxCollider:
@@ -4456,7 +4525,10 @@ MonoBehaviour:
   keyCode: 101
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5698064565761313398
 BoxCollider:
@@ -4879,7 +4951,10 @@ MonoBehaviour:
   keyCode: 283
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5163298556363237170
 BoxCollider:
@@ -5068,7 +5143,10 @@ MonoBehaviour:
   keyCode: 111
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &6029580226071641736
 BoxCollider:
@@ -5335,7 +5413,10 @@ MonoBehaviour:
   keyCode: 274
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2364978628059599944
 BoxCollider:
@@ -5446,7 +5527,10 @@ MonoBehaviour:
   keyCode: 116
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5961968727785546522
 BoxCollider:
@@ -5557,7 +5641,10 @@ MonoBehaviour:
   keyCode: 92
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &158777335753969369
 BoxCollider:
@@ -5746,7 +5833,10 @@ MonoBehaviour:
   keyCode: 48
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1139407521152757320
 BoxCollider:
@@ -5857,7 +5947,10 @@ MonoBehaviour:
   keyCode: 302
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5631683294887370432
 BoxCollider:
@@ -5968,7 +6061,10 @@ MonoBehaviour:
   keyCode: 305
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4820293256608529540
 BoxCollider:
@@ -6079,7 +6175,10 @@ MonoBehaviour:
   keyCode: 104
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5431906438767041377
 BoxCollider:
@@ -6190,7 +6289,10 @@ MonoBehaviour:
   keyCode: 46
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3196102271878707871
 BoxCollider:
@@ -6301,7 +6403,10 @@ MonoBehaviour:
   keyCode: 301
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &580605090469811078
 BoxCollider:
@@ -6412,7 +6517,10 @@ MonoBehaviour:
   keyCode: 289
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4517678746331336845
 BoxCollider:
@@ -6523,7 +6631,10 @@ MonoBehaviour:
   keyCode: 45
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &6402793671443361601
 BoxCollider:
@@ -6790,7 +6901,10 @@ MonoBehaviour:
   keyCode: 108
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &7373163339224924938
 BoxCollider:
@@ -7057,7 +7171,10 @@ MonoBehaviour:
   keyCode: 303
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5409953646766782161
 BoxCollider:
@@ -7245,7 +7362,10 @@ MonoBehaviour:
   keyCode: 310
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2359163788777239406
 BoxCollider:
@@ -7434,7 +7554,10 @@ MonoBehaviour:
   keyCode: 96
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8085050449758443013
 BoxCollider:
@@ -7623,7 +7746,10 @@ MonoBehaviour:
   keyCode: 19
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1670339365808381150
 BoxCollider:
@@ -7734,7 +7860,10 @@ MonoBehaviour:
   keyCode: 107
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &9080583405230265714
 BoxCollider:
@@ -7845,7 +7974,10 @@ MonoBehaviour:
   keyCode: 110
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1709751244251692836
 BoxCollider:
@@ -7956,7 +8088,10 @@ MonoBehaviour:
   keyCode: 8
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &6054472545172087446
 BoxCollider:
@@ -8067,7 +8202,10 @@ MonoBehaviour:
   keyCode: 91
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4491092115930608540
 BoxCollider:
@@ -8256,7 +8394,10 @@ MonoBehaviour:
   keyCode: 304
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8572994226663085225
 BoxCollider:
@@ -8757,7 +8898,10 @@ MonoBehaviour:
   keyCode: 290
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1207266630142093874
 BoxCollider:
@@ -9024,7 +9168,10 @@ MonoBehaviour:
   keyCode: 285
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &7079207243909752569
 BoxCollider:
@@ -9213,7 +9360,10 @@ MonoBehaviour:
   keyCode: 113
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &688889478785018455
 BoxCollider:
@@ -9480,7 +9630,10 @@ MonoBehaviour:
   keyCode: 50
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5594447812093872886
 BoxCollider:
@@ -9591,7 +9744,10 @@ MonoBehaviour:
   keyCode: 109
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3164618349991598843
 BoxCollider:
@@ -9858,7 +10014,10 @@ MonoBehaviour:
   keyCode: 102
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3590437301698580447
 BoxCollider:
@@ -9969,7 +10128,10 @@ MonoBehaviour:
   keyCode: 103
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4248391762263084557
 BoxCollider:
@@ -10080,7 +10242,10 @@ MonoBehaviour:
   keyCode: 287
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2018646847553743563
 BoxCollider:
@@ -10269,7 +10434,10 @@ MonoBehaviour:
   keyCode: 278
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4739717887292472377
 BoxCollider:
@@ -10380,7 +10548,10 @@ MonoBehaviour:
   keyCode: 307
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5788490940726330537
 BoxCollider:
@@ -10568,7 +10739,10 @@ MonoBehaviour:
   keyCode: 0
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3000652073833165980
 BoxCollider:
@@ -10757,7 +10931,10 @@ MonoBehaviour:
   keyCode: 127
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2111128889048361564
 BoxCollider:
@@ -10868,7 +11045,10 @@ MonoBehaviour:
   keyCode: 121
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4687077594181278847
 BoxCollider:
@@ -11213,7 +11393,10 @@ MonoBehaviour:
   keyCode: 59
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2239359597490276297
 BoxCollider:
@@ -11403,7 +11586,10 @@ MonoBehaviour:
   keyCode: 280
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2587240550847167914
 BoxCollider:
@@ -11431,6 +11617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depotKey: {fileID: 5680687465252803735}
+  plopEffect: {fileID: 0}
 --- !u!1 &6101798053212725183
 GameObject:
   m_ObjectHideFlags: 0
@@ -11605,7 +11792,10 @@ MonoBehaviour:
   keyCode: 93
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4171384656543970461
 BoxCollider:
@@ -11794,7 +11984,10 @@ MonoBehaviour:
   keyCode: 282
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2144827493793036366
 BoxCollider:
@@ -11905,7 +12098,10 @@ MonoBehaviour:
   keyCode: 276
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5909764083244861736
 BoxCollider:
@@ -12016,7 +12212,10 @@ MonoBehaviour:
   keyCode: 44
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8296145239819458920
 BoxCollider:
@@ -12127,7 +12326,10 @@ MonoBehaviour:
   keyCode: 120
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4797858308255649772
 BoxCollider:
@@ -12512,7 +12714,10 @@ MonoBehaviour:
   keyCode: 273
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8997660709046422996
 BoxCollider:
@@ -12623,7 +12828,10 @@ MonoBehaviour:
   keyCode: 119
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4513678777014204867
 BoxCollider:
@@ -13046,7 +13254,10 @@ MonoBehaviour:
   keyCode: 99
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2576541440913684780
 BoxCollider:
@@ -13157,7 +13368,10 @@ MonoBehaviour:
   keyCode: 47
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2885436622789938509
 BoxCollider:
@@ -13346,7 +13560,10 @@ MonoBehaviour:
   keyCode: 118
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5719577793966383086
 BoxCollider:
@@ -13535,7 +13752,10 @@ MonoBehaviour:
   keyCode: 293
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &6088995640842337403
 BoxCollider:
@@ -13646,7 +13866,10 @@ MonoBehaviour:
   keyCode: 122
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8284095983810656181
 BoxCollider:
@@ -13757,7 +13980,10 @@ MonoBehaviour:
   keyCode: 52
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1500223874827379580
 BoxCollider:
@@ -13988,7 +14214,10 @@ MonoBehaviour:
   keyCode: 53
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3409098297489169166
 BoxCollider:
@@ -14099,7 +14328,10 @@ MonoBehaviour:
   keyCode: 308
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2738552006195590467
 BoxCollider:
@@ -14210,7 +14442,10 @@ MonoBehaviour:
   keyCode: 39
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1073758395363849416
 BoxCollider:
@@ -15179,7 +15414,10 @@ MonoBehaviour:
   keyCode: 288
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &777386326425352392
 BoxCollider:
@@ -15290,7 +15528,10 @@ MonoBehaviour:
   keyCode: 27
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5865683854454884069
 BoxCollider:
@@ -15479,7 +15720,10 @@ MonoBehaviour:
   keyCode: 54
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8691303440354018434
 BoxCollider:
@@ -15590,7 +15834,10 @@ MonoBehaviour:
   keyCode: 291
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &2339332062122949542
 BoxCollider:
@@ -15779,7 +16026,10 @@ MonoBehaviour:
   keyCode: 316
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &8744646263255708078
 BoxCollider:
@@ -16046,7 +16296,10 @@ MonoBehaviour:
   keyCode: 117
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &7448268483447280315
 BoxCollider:
@@ -16547,7 +16800,10 @@ MonoBehaviour:
   keyCode: 106
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &3753057868704270607
 BoxCollider:
@@ -16658,7 +16914,10 @@ MonoBehaviour:
   keyCode: 9
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &5432915783800621866
 BoxCollider:
@@ -16769,7 +17028,10 @@ MonoBehaviour:
   keyCode: 284
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &4879958300443462665
 BoxCollider:
@@ -16880,7 +17142,10 @@ MonoBehaviour:
   keyCode: 279
   speed: 1
   isOnRightSpot: 0
+  particleEffectPlop: {fileID: 3206824456976662186, guid: c05410d32b89bbb49b0da911282f5d55,
+    type: 3}
   IsBroken: 0
+  originalPos: {x: 0, y: 0, z: 0}
   beforeDepotPos: {x: 0, y: 0, z: 0}
 --- !u!65 &896020006879122611
 BoxCollider:

@@ -68,15 +68,15 @@ public class Depot : MonoBehaviour
         if (newKey)
         {
             Debug.Log(newKey.transform.position);
-            SpawnEffect(newKey.transform.position);
+            SpawnParticleEffect(newKey.transform.position);
         }
         if (dequeueKey)
         {
             Debug.Log(dequeueKey.transform.position);
-            SpawnEffect(dequeueKey.transform.position);
+            SpawnParticleEffect(dequeueKey.transform.position);
         }
     }
-    private void SpawnEffect(Vector3 pos)
+    private void SpawnParticleEffect(Vector3 pos)
     {
         var effect = Instantiate(plopEffect, pos, Quaternion.identity);
         effect.GetComponentInChildren<ParticleSystem>().Play();
