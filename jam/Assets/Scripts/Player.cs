@@ -107,6 +107,7 @@ public class Player : MonoBehaviour
     private void StartMoveToTarget(Vector3 target)
     {
         if(isStunned) return;
+        if(startGameManager.inSetup) return;
         start = transform.position;
         this.target = new Vector3(target.x, transform.position.y, target.z);
         startDist = Vector3.Distance(start, this.target);
